@@ -1,0 +1,31 @@
+name: Deploy to test servers
+
+
+on:
+  repository_dispatch:
+    types: [helios-deployment]
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo "Payload: ${{ github.event.client_payload }}"
+  conditional_build_job:
+    runs-on: ubuntu-latest
+    needs: print
+    steps:
+    - name: Send greeting
+      run: echo "Hello"
+    - name: Failing Step
+      run: exit 1      
+    - name: Set Failure Details
+      if: failure()
+      run: echo "failure_reason=Build failed at Step 1" >> $GITHUB_ENV
+  deploy:
+    environment: dev
+    needs: conditional_build_job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo "Hello"
