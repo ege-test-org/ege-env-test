@@ -2,8 +2,23 @@ name: Deploy to test servers
 
 
 on:
-  repository_dispatch:
-    types: [helios-deployment]
+  workflow_dispatch:
+    inputs:
+      HELIOS_TRIGGERED_BY:
+        description: "The user who triggered the workflow"
+        required: true
+      HELIOS_BRANCH_NAME:
+        description: "The branch name to deploy"
+        required: true
+      HELIOS_ENVIRONMENT_NAME:
+        description: "The environment to deploy to"
+        required: true
+      HELIOS_BUILD:
+        description: "Whether to build the project"
+        required: true
+      HELIOS_BUILD_TAG:
+        description: "The build tag (if HELIOS_BUILD is true)"
+        required: false
 
 jobs:
   print:
