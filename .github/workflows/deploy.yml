@@ -1,0 +1,19 @@
+name: Deploy to test servers
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  conditional_build_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo "Hello"
+  deploy:
+    environment: dev
+    needs: conditional_build_job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo "Hello"
