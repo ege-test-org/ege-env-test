@@ -11,7 +11,10 @@ jobs:
     - name: Send greeting
       run: echo "Hello"
     - name: Failing Step
-      run: exit 1
+      run: exit 1      
+    - name: Set Failure Details
+      if: failure()
+      run: echo "failure_reason=Build failed at Step 1" >> $GITHUB_ENV
   deploy:
     environment: dev
     needs: conditional_build_job
