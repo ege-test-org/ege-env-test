@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Send greeting
       run: echo "Hello"
+    - name: Failing Step
+      run: exit 1
   deploy:
     environment: dev
     needs: conditional_build_job
