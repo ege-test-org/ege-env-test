@@ -33,15 +33,22 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      # Inject repository secret into the job
+      # Make the GitHub repository secret available to this job
       REPO_SECRET: ${{ secrets.HELIOS_SECRET }}
+      # Also store the user-provided secret input in an env var
+      USER_INPUT_SECRET: ${{ inputs.secret }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Mask secrets so they do not appear in logs
+        run: |
+          echo "::add-mask::${USER_INPUT_SECRET}"
+          echo "::add-mask::${REPO_SECRET}"
       - name: Check if secret matches
         id: check_secret
         run: |
-          if [ "${{ inputs.secret }}" != "$REPO_SECRET" ]; then
+          # Compare environment variables, not literal strings
+          if [ "${USER_INPUT_SECRET}" != "${REPO_SECRET}" ]; then
             echo "Error: Provided secret does not match the repository secret."
             exit 1
           fi
