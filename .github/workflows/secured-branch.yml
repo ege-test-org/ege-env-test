@@ -13,6 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Configure Git User
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "actions@github.com"
+
     - name: Check if helios-metadata-branch exists
       id: check-branch
       run: |
@@ -38,11 +43,6 @@ jobs:
       run: |
         git fetch origin helios-metadata-branch
         git checkout helios-metadata-branch
-
-    - name: Configure Git
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "actions@github.com"
 
     - name: Create or append to metadata.txt
       if: env.exists == 'true'
