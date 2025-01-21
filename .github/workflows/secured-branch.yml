@@ -16,14 +16,14 @@ jobs:
     - name: Check if helios-metadata-branch exists
       id: check-branch
       run: |
-        if git ls-remote --heads origin helios-metadata-branch; then
-          echo "branch-exists=true" >> $GITHUB_ENV
+        if git ls-remote --exit-code --heads origin helios-metadata-branch; then
+          echo "exists=true" >> $GITHUB_ENV
         else
-          echo "branch-exists=false" >> $GITHUB_ENV
+          echo "exists=false" >> $GITHUB_ENV
         fi
 
     - name: Create helios-metadata-branch and clean files if it doesn't exist
-      if: env.branch-exists == 'false'
+      if: env.exists == 'false'
       run: |
         git checkout --orphan helios-metadata-branch
         rm -rf *
@@ -34,7 +34,7 @@ jobs:
         git push origin helios-metadata-branch --force
 
     - name: Checkout helios-metadata-branch
-      if: env.branch-exists == 'true'
+      if: env.exists == 'true'
       run: |
         git fetch origin helios-metadata-branch
         git checkout helios-metadata-branch
@@ -45,7 +45,7 @@ jobs:
         git config user.email "actions@github.com"
 
     - name: Create or append to metadata.txt
-      if: env.branch-exists == 'true'
+      if: env.exists == 'true'
       run: |
         FILE="metadata.txt"
         echo "Appending timestamp: $(date)" >> "$FILE"
