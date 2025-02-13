@@ -28,7 +28,7 @@ jobs:
         echo "Branch: ${{ github.event.inputs.branch_name }}"
         echo "Environment: ${{ github.event.inputs.environment_name }}"
         echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
-        sleep 120
+
 
   deploy:
     environment: ${{ github.event.inputs.environment_name }}
