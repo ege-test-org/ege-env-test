@@ -16,6 +16,9 @@ on:
         description: "Username that triggered deployment (not required, shown if triggered via GitHub UI, logged if triggered via GitHub app)"
         required: false
         type: string
+      commit_sha:
+        required: false
+        type: string
 
 concurrency: ${{ github.event.inputs.environment_name }}
 
