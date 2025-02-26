@@ -1,26 +1,6 @@
 name: Deploy to test servers
 
-
-on:
-  workflow_dispatch:
-    inputs:
-      HELIOS_TRIGGERED_BY:
-        description: "Username that triggered deployment"
-        required: true
-        type: string
-      HELIOS_BRANCH_NAME:
-        description: "Which branch to deploy"
-        required: true
-        type: string
-      HELIOS_BRANCH_HEAD_SHA:
-        description: "SHA of the branch to deploy"
-        required: true
-        type: string
-      HELIOS_PR_NUMBER:
-        description: "PR number that triggered deployment"
-        required: false
-        type: string
-      HELIOS_ENVIRONMENT_NAME:
+asdasdsadsadadadadadadadadadadadsadadasdasdsadasdad
         description: "Which environment to deploy (e.g. artemis-test7.artemis.cit.tum.de, etc.)."
         required: true
         type: string
@@ -37,18 +17,26 @@ on:
         description: "URL to the raw content of the repository in the format https://raw.githubusercontent.com/:owner/:repo/:sha"
         required: false
         type: string
+      branch_name:
+        description: "Which branch to deploy"
+        required: true
+        type: string
+      environment_name:
+        description: "Which environment to deploy (environment defined in GitHub)"
+        required: true
+        type: string
+      triggered_by:
+        description: "Username that triggered deployment (not required, shown if triggered via GitHub UI, logged if triggered via GitHub app)"
+        required: false
+        type: string
 
-jobs:
-  conditional_build_job:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Send greeting
-      run: echo "Hello"
+asdasd"Environment: ${{ github.event.inputs.environment_name }}"
+        echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
+
   deploy:
-    environment: dev
+    environment: ${{ github.event.inputs.environment_name }}
     needs: conditional_build_job
     runs-on: ubuntu-latest
     steps:
-    - name: Send greeting
-      run: echo "Hello"
+asd
 
