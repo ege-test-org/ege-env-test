@@ -15,6 +15,10 @@ concurrency:
     }}
   cancel-in-progress: true
 
+env:
+  STATUS_CONTEXT: "GitHub E2E Tests"
+  TARGET_URL: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
 jobs:
   run-e2e:
     name: Run E2E Tests
@@ -38,7 +42,7 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
-            -d '{"state":"pending","context":"E2E Tests","description":"E2E tests are running...","target_url":"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}'
+            -d '{"state":"pending","context":"${{ env.STATUS_CONTEXT }}","description":"E2E tests are running...","target_url":"${{ env.TARGET_URL }}"}'
       - name: Echo concurrency group
         run: |
           CONCURRENCY_GROUP=$(echo "${{ 
@@ -70,6 +74,7 @@ jobs:
           # Check if test results file exists
           XML_FILE="src/test/playwright/test-reports/results.xml"
           if [ -f "$XML_FILE" ]; then
+            echo "Final results.xml file found, started parsing..."
             # Sum the totals for all testsuites
             TESTS_COUNT=$(grep -o 'tests="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
             FAILURES_COUNT=$(grep -o 'failures="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
@@ -82,18 +87,18 @@ jobs:
             
             # Calculate passed tests
             PASSED=$((TOTAL - FAILED - SKIPPED))
-            
-            echo "XML Parsing Results:"
-            echo "Total: $TOTAL"
-            echo "Failed: $FAILED" 
-            echo "Skipped: $SKIPPED"
-            echo "Passed: $PASSED"
           fi
+
+          echo "XML Parsing Results:"
+          echo "Total: $TOTAL"
+          echo "Failed: $FAILED" 
+          echo "Skipped: $SKIPPED"
+          echo "Passed: $PASSED"
           
           # Determine GitHub status state based on workflow status
           if [ "$WORKFLOW_STATUS" = "success" ]; then
             STATE="success"
-            DESCRIPTION="✅ E2E tests passed: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+            DESCRIPTION="✅ E2E tests finished: $PASSED passed, $FAILED failed, $SKIPPED skipped"
           elif [ "$WORKFLOW_STATUS" = "failure" ]; then
             STATE="failure"
             DESCRIPTION="❌ E2E tests failed: $PASSED passed, $FAILED failed, $SKIPPED skipped"
@@ -103,7 +108,7 @@ jobs:
           fi
 
           DESCRIPTION_ESCAPED=$(echo "$DESCRIPTION" | sed 's/"/\\"/g')
-          JSON_PAYLOAD="{\"state\":\"$STATE\",\"context\":\"E2E Tests\",\"description\":\"$DESCRIPTION_ESCAPED\",\"target_url\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+          JSON_PAYLOAD="{\"state\":\"$STATE\",\"context\":\"${{ env.STATUS_CONTEXT }}\",\"description\":\"$DESCRIPTION_ESCAPED\",\"target_url\":\"${{ env.TARGET_URL }}\"}"
           echo "JSON payload: $JSON_PAYLOAD"
           
           # Update status
