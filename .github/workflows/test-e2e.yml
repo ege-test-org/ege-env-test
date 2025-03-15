@@ -70,18 +70,15 @@ jobs:
           # Check if test results file exists
           XML_FILE="src/test/playwright/test-reports/results.xml"
           if [ -f "$XML_FILE" ]; then
-            # Use sed to extract the test counts from XML attributes
-            XML_CONTENT=$(cat "$XML_FILE")
+            # Sum the totals for all testsuites
+            TESTS_COUNT=$(grep -o 'tests="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+            FAILURES_COUNT=$(grep -o 'failures="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+            SKIPPED_COUNT=$(grep -o 'skipped="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
             
-            # Extract metrics using basic sed
-            TESTS_MATCH=$(echo "$XML_CONTENT" | sed -n 's/.*tests="\([0-9]*\)".*/\1/p' | head -1)
-            FAILURES_MATCH=$(echo "$XML_CONTENT" | sed -n 's/.*failures="\([0-9]*\)".*/\1/p' | head -1)
-            SKIPPED_MATCH=$(echo "$XML_CONTENT" | sed -n 's/.*skipped="\([0-9]*\)".*/\1/p' | head -1)
-            
-            # Use values if matches were found
-            if [ -n "$TESTS_MATCH" ]; then TOTAL=$TESTS_MATCH; fi
-            if [ -n "$FAILURES_MATCH" ]; then FAILED=$FAILURES_MATCH; fi
-            if [ -n "$SKIPPED_MATCH" ]; then SKIPPED=$SKIPPED_MATCH; fi
+            # Use values if counts were found
+            if [ -n "$TESTS_COUNT" ]; then TOTAL=$TESTS_COUNT; fi
+            if [ -n "$FAILURES_COUNT" ]; then FAILED=$FAILURES_COUNT; fi
+            if [ -n "$SKIPPED_COUNT" ]; then SKIPPED=$SKIPPED_COUNT; fi
             
             # Calculate passed tests
             PASSED=$((TOTAL - FAILED - SKIPPED))
@@ -105,19 +102,7 @@ jobs:
             DESCRIPTION="⚠️ E2E tests encountered an error"
           fi
           
-          # Build JSON payload carefully
-          JSON_PAYLOAD=$(cat <<EOF
-          {
-            "state": "$STATE",
-            "context": "E2E Tests",
-            "description": "$DESCRIPTION",
-            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          }
-          EOF
-          )
-          
-          # Remove newlines to create a single-line JSON string
-          JSON_PAYLOAD=$(echo "$JSON_PAYLOAD" | tr -d '\n' | tr -d '    ')
+          JSON_PAYLOAD="{\"state\":\"$STATE\",\"context\":\"E2E Tests\",\"description\":\"$DESCRIPTION_ESCAPED\",\"target_url\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
           echo "JSON payload: $JSON_PAYLOAD"
           
           # Update status
