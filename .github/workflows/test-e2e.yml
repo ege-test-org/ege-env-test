@@ -16,6 +16,7 @@ concurrency:
 
 env:
   STATUS_CONTEXT: "GitHub E2E Tests"
+  STATUSES_REQUEST_URL: "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}"
   TARGET_URL: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
 jobs:
@@ -29,7 +30,7 @@ jobs:
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
+            "${{ env.STATUSES_REQUEST_URL }}" \
             -d '{"state":"pending","context":"${{ env.STATUS_CONTEXT }}","description":"E2E tests are running...","target_url":"${{ env.TARGET_URL }}"}'
       - name: Echo concurrency group
         run: |
@@ -123,7 +124,7 @@ jobs:
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
+            "${{ env.STATUSES_REQUEST_URL }}" \
             -d "$JSON_PAYLOAD"
 
       - name: Fallback status update
@@ -136,5 +137,5 @@ jobs:
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
+            "${{ env.STATUSES_REQUEST_URL }}" \
             -d "$JSON_PAYLOAD"
