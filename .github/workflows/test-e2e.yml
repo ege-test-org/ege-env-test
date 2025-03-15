@@ -39,7 +39,14 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
             -d '{"state":"pending","context":"E2E Tests","description":"E2E tests are running...","target_url":"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}'
-      
+      - name: Echo concurrency group
+        run: |
+          CONCURRENCY_GROUP=$(echo "${{ 
+            github.event.workflow_run.head_branch && format('e2e-{0}', github.event.workflow_run.head_branch)
+            || github.event.workflow_run.event == 'release' && format('e2e-release-{0}', github.event.workflow_run.tag_name)
+            || format('e2e-{0}', github.event.workflow_run.head_sha)
+          }}")
+          echo "Concurrency group: $CONCURRENCY_GROUP"
       - name: Git Checkout
         uses: actions/checkout@v4
       - name: Echo github.event
@@ -47,7 +54,7 @@ jobs:
       - name: Echo github.event.workflow_run
         run: echo '${{ toJSON(github.event.workflow_run) }}'
       - name: Sleep
-        run: sleep 120
+        run: sleep 30 && exit 1
       - name: Parse test results and update status
         if: always()
         run: |
@@ -61,12 +68,29 @@ jobs:
           SKIPPED=0
           
           # Check if test results file exists
-          if [ -f "src/test/playwright/test-reports/results.xml" ]; then
-            # Parse XML to extract test metrics
-            TOTAL=$(grep -o 'tests="[0-9]*"' src/test/playwright/test-reports/results.xml | grep -o '[0-9]*')
-            FAILED=$(grep -o 'failures="[0-9]*"' src/test/playwright/test-reports/results.xml | grep -o '[0-9]*')
-            SKIPPED=$(grep -o 'skipped="[0-9]*"' src/test/playwright/test-reports/results.xml | grep -o '[0-9]*')
+          XML_FILE="src/test/playwright/test-reports/results.xml"
+          if [ -f "$XML_FILE" ]; then
+            # Use sed to extract the test counts from XML attributes
+            XML_CONTENT=$(cat "$XML_FILE")
+            
+            # Extract metrics using basic sed
+            TESTS_MATCH=$(echo "$XML_CONTENT" | sed -n 's/.*tests="\([0-9]*\)".*/\1/p' | head -1)
+            FAILURES_MATCH=$(echo "$XML_CONTENT" | sed -n 's/.*failures="\([0-9]*\)".*/\1/p' | head -1)
+            SKIPPED_MATCH=$(echo "$XML_CONTENT" | sed -n 's/.*skipped="\([0-9]*\)".*/\1/p' | head -1)
+            
+            # Use values if matches were found
+            if [ -n "$TESTS_MATCH" ]; then TOTAL=$TESTS_MATCH; fi
+            if [ -n "$FAILURES_MATCH" ]; then FAILED=$FAILURES_MATCH; fi
+            if [ -n "$SKIPPED_MATCH" ]; then SKIPPED=$SKIPPED_MATCH; fi
+            
+            # Calculate passed tests
             PASSED=$((TOTAL - FAILED - SKIPPED))
+            
+            echo "XML Parsing Results:"
+            echo "Total: $TOTAL"
+            echo "Failed: $FAILED" 
+            echo "Skipped: $SKIPPED"
+            echo "Passed: $PASSED"
           fi
           
           # Determine GitHub status state based on workflow status
@@ -81,11 +105,25 @@ jobs:
             DESCRIPTION="⚠️ E2E tests encountered an error"
           fi
           
+          # Build JSON payload carefully
+          JSON_PAYLOAD=$(cat <<EOF
+          {
+            "state": "$STATE",
+            "context": "E2E Tests",
+            "description": "$DESCRIPTION",
+            "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          }
+          EOF
+          )
+          
+          # Remove newlines to create a single-line JSON string
+          JSON_PAYLOAD=$(echo "$JSON_PAYLOAD" | tr -d '\n' | tr -d '    ')
+          echo "JSON payload: $JSON_PAYLOAD"
+          
           # Update status
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
-            -d "{\"state\":\"$STATE\",\"context\":\"E2E Tests\",\"description\":\"$DESCRIPTION\",\"target_url\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
-
+            -d "$JSON_PAYLOAD"
 
