@@ -101,7 +101,8 @@ jobs:
             STATE="error"
             DESCRIPTION="⚠️ E2E tests encountered an error"
           fi
-          
+
+          DESCRIPTION_ESCAPED=$(echo "$DESCRIPTION" | sed 's/"/\\"/g')
           JSON_PAYLOAD="{\"state\":\"$STATE\",\"context\":\"E2E Tests\",\"description\":\"$DESCRIPTION_ESCAPED\",\"target_url\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
           echo "JSON payload: $JSON_PAYLOAD"
           
