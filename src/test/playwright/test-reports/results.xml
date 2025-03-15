@@ -1,0 +1,1215 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="e2e/course/CourseExercise.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="0" skipped="0" time="8.445" errors="0">
+  
+  <testcase name="Course exercise › Search Exercise › Filters exercises based on title" classname="e2e/course/CourseExercise.spec.ts" time="8.445"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/course/CourseManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="7" failures="0" skipped="0" time="47.391" errors="0">
+  
+  <testcase name="Course management › Manual student selection › Manually adds and removes a student" classname="e2e/course/CourseManagement.spec.ts" time="11.778"></testcase>
+  
+  <testcase name="Course management › Course creation › Creates a new course" classname="e2e/course/CourseManagement.spec.ts" time="7.126"></testcase>
+  
+  <testcase name="Course management › Course creation › Creates a new course with custom groups" classname="e2e/course/CourseManagement.spec.ts" time="7.326"></testcase>
+  
+  <testcase name="Course management › Course edit › Edits a existing course" classname="e2e/course/CourseManagement.spec.ts" time="5.522"></testcase>
+  
+  <testcase name="Course management › Course deletion › Deletes an existing course" classname="e2e/course/CourseManagement.spec.ts" time="5.002"></testcase>
+  
+  <testcase name="Course management › Course icon deletion › Course within icon › Deletes an existing course icon" classname="e2e/course/CourseManagement.spec.ts" time="5.869"></testcase>
+  
+  <testcase name="Course management › Course icon deletion › Course without icon › Deletes not existing course icon" classname="e2e/course/CourseManagement.spec.ts" time="4.768"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/course/CourseMessages.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="28" failures="0" skipped="0" time="266.975" errors="0">
+  
+  <testcase name="Course messages › Channel messages › Create channel › Check for pre-created channels" classname="e2e/course/CourseMessages.spec.ts" time="10.321"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should be able to create a public announcement channel" classname="e2e/course/CourseMessages.spec.ts" time="10.579"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should be able to create a private announcement channel" classname="e2e/course/CourseMessages.spec.ts" time="10.556"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should be able to create a public unrestricted channel" classname="e2e/course/CourseMessages.spec.ts" time="10.705"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should be able to create a public course-wide unrestricted channel" classname="e2e/course/CourseMessages.spec.ts" time="9.884"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should be able to create a private unrestricted channel" classname="e2e/course/CourseMessages.spec.ts" time="10.094"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should not be able to create a channel with uppercase name" classname="e2e/course/CourseMessages.spec.ts" time="7.869"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Instructor should not be able to create a channel with name longer than 30 chars" classname="e2e/course/CourseMessages.spec.ts" time="7.548"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Check that channel is created when a lecture is created" classname="e2e/course/CourseMessages.spec.ts" time="7.258"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Check that channel is created when an exercise is created" classname="e2e/course/CourseMessages.spec.ts" time="8.818"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Create channel › Check that channel is created when an exam is created" classname="e2e/course/CourseMessages.spec.ts" time="7.281"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Edit channel › Instructor should be able to edit a channel" classname="e2e/course/CourseMessages.spec.ts" time="12.415"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Join channel › Student should be joined into pre-created channels automatically" classname="e2e/course/CourseMessages.spec.ts" time="7.624"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Join channel › Student should be able to join a public channel" classname="e2e/course/CourseMessages.spec.ts" time="7.712"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Join channel › Student should be able to leave a public channel" classname="e2e/course/CourseMessages.spec.ts" time="7.853"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Write/edit/delete message in channel › Student should be able to write message in channel" classname="e2e/course/CourseMessages.spec.ts" time="8.362"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Write/edit/delete message in channel › Student should be able to edit message in channel" classname="e2e/course/CourseMessages.spec.ts" time="8.389"></testcase>
+  
+  <testcase name="Course messages › Channel messages › Write/edit/delete message in channel › Student should be able to delete message in channel" classname="e2e/course/CourseMessages.spec.ts" time="14.881"></testcase>
+  
+  <testcase name="Course messages › Group chats › Create group chat › Instructors should be able to create a group chat" classname="e2e/course/CourseMessages.spec.ts" time="10.111"></testcase>
+  
+  <testcase name="Course messages › Group chats › Create group chat › Tutors should be able to create a group chat" classname="e2e/course/CourseMessages.spec.ts" time="9.033"></testcase>
+  
+  <testcase name="Course messages › Group chats › Create group chat › Students should be able to create a group chat" classname="e2e/course/CourseMessages.spec.ts" time="9.07"></testcase>
+  
+  <testcase name="Course messages › Group chats › Add to group chat › Tutors should be able to add a user to group chat" classname="e2e/course/CourseMessages.spec.ts" time="8.749"></testcase>
+  
+  <testcase name="Course messages › Group chats › Add to group chat › Students should be able to add a user to group chat" classname="e2e/course/CourseMessages.spec.ts" time="8.861"></testcase>
+  
+  <testcase name="Course messages › Group chats › Leave group chat › Tutors should be able to leave a group chat" classname="e2e/course/CourseMessages.spec.ts" time="10.916"></testcase>
+  
+  <testcase name="Course messages › Group chats › Leave group chat › Students should be able to leave a group chat" classname="e2e/course/CourseMessages.spec.ts" time="11.102"></testcase>
+  
+  <testcase name="Course messages › Group chats › Write/edit/delete message in group chat › Students should be able to write a message in group chat" classname="e2e/course/CourseMessages.spec.ts" time="7.821"></testcase>
+  
+  <testcase name="Course messages › Group chats › Write/edit/delete message in group chat › Student should be able to edit a message in group chat" classname="e2e/course/CourseMessages.spec.ts" time="7.749"></testcase>
+  
+  <testcase name="Course messages › Group chats › Write/edit/delete message in group chat › Students should be able to delete a message in group chat" classname="e2e/course/CourseMessages.spec.ts" time="15.414"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamAssessment.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="2" failures="0" skipped="0" time="35.802" errors="0">
+  
+  <testcase name="Exam grading › Instructor sets grades and student receives a grade › Set exam gradings" classname="e2e/exam/ExamAssessment.spec.ts" time="2.345"></testcase>
+  
+  <testcase name="Exam grading › Instructor sets grades and student receives a grade › Check student grade" classname="e2e/exam/ExamAssessment.spec.ts" time="33.457"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamChecklists.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="8" failures="0" skipped="0" time="43.955" errors="0">
+  
+  <testcase name="Exam Checklists › Exercise group checks › Instructor adds an exercise group and at least one exercise group check is marked" classname="e2e/exam/ExamChecklists.spec.ts" time="6.032"></testcase>
+  
+  <testcase name="Exam Checklists › Exercise group checks › Instructor adds exercise groups and the number of exercise groups check is correctly reacting to changes" classname="e2e/exam/ExamChecklists.spec.ts" time="6.568"></testcase>
+  
+  <testcase name="Exam Checklists › Exercise group checks › Instructor adds exercise groups and each exercise group has exercises check is correctly reacting to changes" classname="e2e/exam/ExamChecklists.spec.ts" time="4.72"></testcase>
+  
+  <testcase name="Exam Checklists › Exercise group checks › Instructor adds exercise groups and points in exercise groups equal check is correctly reacting to changes" classname="e2e/exam/ExamChecklists.spec.ts" time="5.413"></testcase>
+  
+  <testcase name="Exam Checklists › Exercise group checks › Instructor adds exercise groups and total points possible check is correctly reacting to changes" classname="e2e/exam/ExamChecklists.spec.ts" time="6.411"></testcase>
+  
+  <testcase name="Exam Checklists › Instructor registers a student to exam and at least one student check is marked" classname="e2e/exam/ExamChecklists.spec.ts" time="3.679"></testcase>
+  
+  <testcase name="Exam Checklists › Individual exam generation and exam preparation checks › Instructor generates individual exams, prepares exercises for start and corresponding checks are marked" classname="e2e/exam/ExamChecklists.spec.ts" time="6.766"></testcase>
+  
+  <testcase name="Exam Checklists › Instructor sets the publish results and review dates and the corresponding checks are marked" classname="e2e/exam/ExamChecklists.spec.ts" time="4.366"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamCreationDeletion.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="3" failures="0" skipped="0" time="15.812" errors="0">
+  
+  <testcase name="Exam creation/deletion › Creates an exam" classname="e2e/exam/ExamCreationDeletion.spec.ts" time="5.553"></testcase>
+  
+  <testcase name="Exam creation/deletion › Exam deletion › Deletes an existing exam" classname="e2e/exam/ExamCreationDeletion.spec.ts" time="3.213"></testcase>
+  
+  <testcase name="Exam creation/deletion › Edits an exam › Edits an existing exam" classname="e2e/exam/ExamCreationDeletion.spec.ts" time="7.046"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamDateVerification.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="4" failures="0" skipped="0" time="22.217" errors="0">
+  
+  <testcase name="Exam date verification › Exam timing › Does not show exam before visible date" classname="e2e/exam/ExamDateVerification.spec.ts" time="1.878"></testcase>
+  
+  <testcase name="Exam date verification › Exam timing › Shows after visible date" classname="e2e/exam/ExamDateVerification.spec.ts" time="3.657"></testcase>
+  
+  <testcase name="Exam date verification › Exam timing › Student can start after start Date" classname="e2e/exam/ExamDateVerification.spec.ts" time="5.051"></testcase>
+  
+  <testcase name="Exam date verification › Exam timing › Exam ends after end time" classname="e2e/exam/ExamDateVerification.spec.ts" time="11.631"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="9" failures="0" skipped="0" time="48.181" errors="0">
+  
+  <testcase name="Exam management › Exercise group › Manage Group › Adds a text exercise" classname="e2e/exam/ExamManagement.spec.ts" time="4.285"></testcase>
+  
+  <testcase name="Exam management › Exercise group › Manage Group › Adds a quiz exercise" classname="e2e/exam/ExamManagement.spec.ts" time="9.046"></testcase>
+  
+  <testcase name="Exam management › Exercise group › Manage Group › Adds a modeling exercise" classname="e2e/exam/ExamManagement.spec.ts" time="3.935"></testcase>
+  
+  <testcase name="Exam management › Exercise group › Manage Group › Adds a programming exercise" classname="e2e/exam/ExamManagement.spec.ts" time="13.116"></testcase>
+  
+  <testcase name="Exam management › Exercise group › Manage Group › Edits an exercise group" classname="e2e/exam/ExamManagement.spec.ts" time="3.937"></testcase>
+  
+  <testcase name="Exam management › Exercise group › Manage Group › Delete an exercise group" classname="e2e/exam/ExamManagement.spec.ts" time="4.209"></testcase>
+  
+  <testcase name="Exam management › Exercise group › Create exercise group" classname="e2e/exam/ExamManagement.spec.ts" time="3.942"></testcase>
+  
+  <testcase name="Exam management › Manage Students › Registers the course students for the exam" classname="e2e/exam/ExamManagement.spec.ts" time="2.785"></testcase>
+  
+  <testcase name="Exam management › Manage Students › Generates student exams" classname="e2e/exam/ExamManagement.spec.ts" time="2.926"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="1" skipped="0" time="41.788" errors="0">
+  
+  <testcase name="Exam participation › Exam announcements › Instructor changes problem statement and all participants are informed" classname="e2e/exam/ExamParticipation.spec.ts" time="41.788">
+    
+    <failure message="ExamParticipation.spec.ts:358:13 Instructor changes problem statement and all participants are informed" type="FAILURE">
+      
+      <![CDATA[[fast-tests] › e2e/exam/ExamParticipation.spec.ts:358:13 › Exam participation › Exam announcements › Instructor changes problem statement and all participants are informed @fast 
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+
+
+       at support/pageobjects/exam/ModalDialogBox.ts:32
+
+      30 |
+      31 |     async checkDialogAuthor(authorUsername: string) {
+    > 32 |         await expect(this.getModalDialogContent().locator('.author').getByText(authorUsername)).toBeVisible();
+         |                                                                                                 ^
+      33 |     }
+      34 |
+      35 |     async checkExamTimeChangeDialog(previousWorkingTime: string, newWorkingTime: string) {
+        at ModalDialogBox.checkDialogAuthor (/app/artemis/src/test/playwright/support/pageobjects/exam/ModalDialogBox.ts:32:97)
+        at /app/artemis/src/test/playwright/e2e/exam/ExamParticipation.spec.ts:399:39
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+
+
+       at support/pageobjects/exam/ModalDialogBox.ts:32
+
+      30 |
+      31 |     async checkDialogAuthor(authorUsername: string) {
+    > 32 |         await expect(this.getModalDialogContent().locator('.author').getByText(authorUsername)).toBeVisible();
+         |                                                                                                 ^
+      33 |     }
+      34 |
+      35 |     async checkExamTimeChangeDialog(previousWorkingTime: string, newWorkingTime: string) {
+        at ModalDialogBox.checkDialogAuthor (/app/artemis/src/test/playwright/support/pageobjects/exam/ModalDialogBox.ts:32:97)
+        at /app/artemis/src/test/playwright/e2e/exam/ExamParticipation.spec.ts:399:39
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-exam-ExamParticipation-157e2-l-participants-are-informed-fast-tests-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-exam-ExamParticipation-157e2-l-participants-are-informed-fast-tests-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────]]>
+      
+    </failure>
+    
+    <system-out>
+      
+      <![CDATA[[[ATTACHMENT|../test-results/e2e-exam-ExamParticipation-157e2-l-participants-are-informed-fast-tests-retry1/trace.zip]]]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamResults.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="0" skipped="0" time="35.945" errors="0">
+  
+  <testcase name="Exam Results › Check exam exercise results › Check exam results for text exercise › Check exam result overview" classname="e2e/exam/ExamResults.spec.ts" time="35.945"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamTestRun.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="4" failures="0" skipped="0" time="179.158" errors="0">
+  
+  <testcase name="Exam test run › Creates a test run" classname="e2e/exam/ExamTestRun.spec.ts" time="40.381">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)
+Could not find test cases yet, retrying... (6 / 20)
+Could not find test cases yet, retrying... (7 / 20)
+Could not find test cases yet, retrying... (8 / 20)
+Could not find test cases yet, retrying... (9 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam test run › Manage a test run › Changes test run working time" classname="e2e/exam/ExamTestRun.spec.ts" time="42.361">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)
+Could not find test cases yet, retrying... (6 / 20)
+Could not find test cases yet, retrying... (7 / 20)
+Could not find test cases yet, retrying... (8 / 20)
+Could not find test cases yet, retrying... (9 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam test run › Manage a test run › Conducts a test run" classname="e2e/exam/ExamTestRun.spec.ts" time="66.394">
+    
+    <properties>
+      
+      <property name="slow" value=""></property>
+      
+    </properties>
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)
+Could not find test cases yet, retrying... (6 / 20)
+Could not find test cases yet, retrying... (7 / 20)
+Could not find test cases yet, retrying... (8 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam test run › Delete a test run › Deletes a test run" classname="e2e/exam/ExamTestRun.spec.ts" time="30.022">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/test-exam/TestExamCreationDeletion.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="2" failures="0" skipped="0" time="13.441" errors="0">
+  
+  <testcase name="Test Exam creation/deletion › Creates a test exam" classname="e2e/exam/test-exam/TestExamCreationDeletion.spec.ts" time="8.919"></testcase>
+  
+  <testcase name="Test Exam creation/deletion › Test exam deletion › Deletes an existing test exam" classname="e2e/exam/test-exam/TestExamCreationDeletion.spec.ts" time="4.522"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/test-exam/TestExamManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="7" failures="0" skipped="0" time="59.294" errors="0">
+  
+  <testcase name="Test Exam management › Manage Group › Create exercise group" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="6.996"></testcase>
+  
+  <testcase name="Test Exam management › Manage Group › Adds a text exercise" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="7.634"></testcase>
+  
+  <testcase name="Test Exam management › Manage Group › Adds a quiz exercise" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="14.509"></testcase>
+  
+  <testcase name="Test Exam management › Manage Group › Adds a modeling exercise" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="4.75"></testcase>
+  
+  <testcase name="Test Exam management › Manage Group › Adds a programming exercise" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="8.944"></testcase>
+  
+  <testcase name="Test Exam management › Manage Group › Edits an exercise group" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="8.23"></testcase>
+  
+  <testcase name="Test Exam management › Manage Group › Delete an exercise group" classname="e2e/exam/test-exam/TestExamManagement.spec.ts" time="8.231"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/ExerciseImport.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="3" failures="0" skipped="0" time="53.286" errors="0">
+  
+  <testcase name="Import exercises › Imports exercises › Imports text exercise" classname="e2e/exercise/ExerciseImport.spec.ts" time="14.312"></testcase>
+  
+  <testcase name="Import exercises › Imports exercises › Imports quiz exercise" classname="e2e/exercise/ExerciseImport.spec.ts" time="18.23"></testcase>
+  
+  <testcase name="Import exercises › Imports exercises › Imports modeling exercise" classname="e2e/exercise/ExerciseImport.spec.ts" time="20.744"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/file-upload/FileUploadExerciseAssessment.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="3" failures="0" skipped="0" time="13.17" errors="0">
+  
+  <testcase name="File upload exercise assessment › Feedback › Assesses the file upload exercise submission" classname="e2e/exercise/file-upload/FileUploadExerciseAssessment.spec.ts" time="6.552"></testcase>
+  
+  <testcase name="File upload exercise assessment › Feedback › Student sees feedback after assessment due date and complains" classname="e2e/exercise/file-upload/FileUploadExerciseAssessment.spec.ts" time="4.283"></testcase>
+  
+  <testcase name="File upload exercise assessment › Feedback › Instructor can see complaint and reject it" classname="e2e/exercise/file-upload/FileUploadExerciseAssessment.spec.ts" time="2.335"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/file-upload/FileUploadExerciseManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="2" failures="0" skipped="0" time="12.73" errors="0">
+  
+  <testcase name="File upload exercise management › Creates a file upload exercise in the UI" classname="e2e/exercise/file-upload/FileUploadExerciseManagement.spec.ts" time="7.822"></testcase>
+  
+  <testcase name="File upload exercise management › File upload exercise deletion › Deletes an existing file upload exercise" classname="e2e/exercise/file-upload/FileUploadExerciseManagement.spec.ts" time="4.908"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/file-upload/FileUploadExerciseParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="0" skipped="0" time="5.038" errors="0">
+  
+  <testcase name="File upload exercise participation › Starts a file upload exercise in the UI" classname="e2e/exercise/file-upload/FileUploadExerciseParticipation.spec.ts" time="5.038"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/modeling/ModelingExerciseAssessment.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="3" failures="0" skipped="0" time="13.79" errors="0">
+  
+  <testcase name="Modeling Exercise Assessment › Handling complaints › Tutor can assess a submission" classname="e2e/exercise/modeling/ModelingExerciseAssessment.spec.ts" time="8.036"></testcase>
+  
+  <testcase name="Modeling Exercise Assessment › Handling complaints › Student can view the assessment and complain" classname="e2e/exercise/modeling/ModelingExerciseAssessment.spec.ts" time="3.449"></testcase>
+  
+  <testcase name="Modeling Exercise Assessment › Handling complaints › Instructor can see complaint and reject it" classname="e2e/exercise/modeling/ModelingExerciseAssessment.spec.ts" time="2.305"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/modeling/ModelingExerciseManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="5" failures="0" skipped="0" time="23.784" errors="0">
+  
+  <testcase name="Modeling Exercise Management › Create Modeling Exercise › Create a new modeling exercise" classname="e2e/exercise/modeling/ModelingExerciseManagement.spec.ts" time="9.588"></testcase>
+  
+  <testcase name="Modeling Exercise Management › Edit Modeling Exercise › Edit Existing Modeling Exercise" classname="e2e/exercise/modeling/ModelingExerciseManagement.spec.ts" time="5.476"></testcase>
+  
+  <testcase name="Modeling Exercise Management › Delete Modeling Exercise › Deletes an existing Modeling exercise" classname="e2e/exercise/modeling/ModelingExerciseManagement.spec.ts" time="3.927"></testcase>
+  
+  <testcase name="Modeling Exercise Management › Modeling Exercise Release › Student can not see unreleased Modeling Exercise" classname="e2e/exercise/modeling/ModelingExerciseManagement.spec.ts" time="2.525"></testcase>
+  
+  <testcase name="Modeling Exercise Management › Modeling Exercise Release › Student can see released Modeling Exercise" classname="e2e/exercise/modeling/ModelingExerciseManagement.spec.ts" time="2.268"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/modeling/ModelingExerciseParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="0" skipped="0" time="4.364" errors="0">
+  
+  <testcase name="Modeling Exercise Participation › Student can start and submit their model" classname="e2e/exercise/modeling/ModelingExerciseParticipation.spec.ts" time="4.364"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/programming/ProgrammingExerciseManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="4" failures="0" skipped="0" time="38.425" errors="0">
+  
+  <testcase name="Programming Exercise Management › Programming exercise creation › Creates a new programming exercise" classname="e2e/exercise/programming/ProgrammingExerciseManagement.spec.ts" time="7.763"></testcase>
+  
+  <testcase name="Programming Exercise Management › Programming exercise creation › FormStatusBar scrolls to the correct section with headline visible after scroll" classname="e2e/exercise/programming/ProgrammingExerciseManagement.spec.ts" time="5.763"></testcase>
+  
+  <testcase name="Programming Exercise Management › Programming exercise deletion › Deletes an existing programming exercise" classname="e2e/exercise/programming/ProgrammingExerciseManagement.spec.ts" time="6.432"></testcase>
+  
+  <testcase name="Programming Exercise Management › Programming exercise team creation › Create an exercise team" classname="e2e/exercise/programming/ProgrammingExerciseManagement.spec.ts" time="18.467"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/quiz-exercise/QuizExerciseAssessment.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="2" failures="0" skipped="0" time="51.435" errors="0">
+  
+  <testcase name="Quiz Exercise Assessment › MC Quiz assessment › Assesses a mc quiz submission automatically" classname="e2e/exercise/quiz-exercise/QuizExerciseAssessment.spec.ts" time="27.714"></testcase>
+  
+  <testcase name="Quiz Exercise Assessment › SA Quiz assessment › Assesses a sa quiz submission automatically" classname="e2e/exercise/quiz-exercise/QuizExerciseAssessment.spec.ts" time="23.721"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/quiz-exercise/QuizExerciseDropLocation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="0" skipped="0" time="17.137" errors="0">
+  
+  <testcase name="Quiz Exercise Drop Location Spec › DnD Quiz drop locations › Checks drop locations" classname="e2e/exercise/quiz-exercise/QuizExerciseDropLocation.spec.ts" time="17.137"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="6" failures="0" skipped="0" time="51.452" errors="0">
+  
+  <testcase name="Quiz Exercise Management › Quiz Exercise Creation › Creates a Quiz with Multiple Choice" classname="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" time="16.37"></testcase>
+  
+  <testcase name="Quiz Exercise Management › Quiz Exercise Creation › Creates a Quiz with Multiple Choice (Visual)" classname="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" time="15.289"></testcase>
+  
+  <testcase name="Quiz Exercise Management › Quiz Exercise Creation › Creates a Quiz with Short Answer" classname="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" time="6.855"></testcase>
+  
+  <testcase name="Quiz Exercise Management › Quiz Exercise Creation › Creates a Quiz with Drag and Drop" classname="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" time="6.745"></testcase>
+  
+  <testcase name="Quiz Exercise Management › Quiz Exercise Deletion › Deletes a quiz exercise" classname="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" time="3.343"></testcase>
+  
+  <testcase name="Quiz Exercise Management › Quiz Exercise Export › Export quiz exercise questions" classname="e2e/exercise/quiz-exercise/QuizExerciseManagement.spec.ts" time="2.85"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="11" failures="0" skipped="0" time="60.666" errors="0">
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise participation › Student cannot see hidden quiz" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="2.036"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise participation › Student can see a visible quiz" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="3.82"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise participation › Student can participate in MC quiz" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="4.367"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise scheduled participation › Student cannot participate in scheduled quiz before start of working time" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="3.902"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise scheduled participation › Student can participate in scheduled quiz when working time arrives" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="17.839">
+    
+    <system-out>
+      
+      <![CDATA[Retrying delete course request due to failure]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise batched participation › Instructor creates a quiz batch and student joins it" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="4.789"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise batched participation › Instructor ends the quiz batch and student cannot participate anymore" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="3.973"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise batched participation › Instructor release ended exercise for practice and student practices" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="5.285"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › Quiz exercise individual participation › Student can start a batch in an individual quiz" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="4.557">
+    
+    <system-out>
+      
+      <![CDATA[Retrying delete course request due to failure]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Quiz Exercise Participation › SA quiz participation › Student can participate in SA quiz" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="4.212"></testcase>
+  
+  <testcase name="Quiz Exercise Participation › DnD Quiz participation › Student can participate in DnD Quiz" classname="e2e/exercise/quiz-exercise/QuizExerciseParticipation.spec.ts" time="5.886"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/text/TextExerciseAssessment.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="3" failures="0" skipped="0" time="29.063" errors="0">
+  
+  <testcase name="Text exercise assessment › Feedback › Assesses the text exercise submission" classname="e2e/exercise/text/TextExerciseAssessment.spec.ts" time="3.772"></testcase>
+  
+  <testcase name="Text exercise assessment › Feedback › Student sees feedback after assessment due date and complains" classname="e2e/exercise/text/TextExerciseAssessment.spec.ts" time="19.291"></testcase>
+  
+  <testcase name="Text exercise assessment › Feedback › Instructor can see complaint and reject it" classname="e2e/exercise/text/TextExerciseAssessment.spec.ts" time="6"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/text/TextExerciseManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="2" failures="0" skipped="0" time="8.14" errors="0">
+  
+  <testcase name="Text exercise management › Creates a text exercise in the UI" classname="e2e/exercise/text/TextExerciseManagement.spec.ts" time="4.82"></testcase>
+  
+  <testcase name="Text exercise management › Text exercise deletion › Deletes an existing text exercise" classname="e2e/exercise/text/TextExerciseManagement.spec.ts" time="3.32"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/text/TextExerciseParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="1" failures="0" skipped="0" time="3.629" errors="0">
+  
+  <testcase name="Text exercise participation › Makes a text exercise submission as student" classname="e2e/exercise/text/TextExerciseParticipation.spec.ts" time="3.629"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/lecture/LectureManagement.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="5" failures="0" skipped="0" time="18.922" errors="0">
+  
+  <testcase name="Lecture management › Creates a lecture" classname="e2e/lecture/LectureManagement.spec.ts" time="6.395"></testcase>
+  
+  <testcase name="Lecture management › Deletes a lecture" classname="e2e/lecture/LectureManagement.spec.ts" time="2.904"></testcase>
+  
+  <testcase name="Lecture management › Handle existing lecture › Deletes an existing lecture" classname="e2e/lecture/LectureManagement.spec.ts" time="2.734"></testcase>
+  
+  <testcase name="Lecture management › Handle existing lecture › Adds a text unit to the lecture" classname="e2e/lecture/LectureManagement.spec.ts" time="3.966"></testcase>
+  
+  <testcase name="Lecture management › Handle existing lecture › Adds an exercise unit to the lecture" classname="e2e/lecture/LectureManagement.spec.ts" time="2.923"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/Login.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="5" failures="0" skipped="0" time="3.749" errors="0">
+  
+  <testcase name="Login page tests › Logs in via the UI" classname="e2e/Login.spec.ts" time="0.655"></testcase>
+  
+  <testcase name="Login page tests › Logs in programmatically and logs out via the UI" classname="e2e/Login.spec.ts" time="0.788"></testcase>
+  
+  <testcase name="Login page tests › Displays error messages on wrong password" classname="e2e/Login.spec.ts" time="0.955"></testcase>
+  
+  <testcase name="Login page tests › Fails to access protected resource without login" classname="e2e/Login.spec.ts" time="0.783"></testcase>
+  
+  <testcase name="Login page tests › Verify footer content" classname="e2e/Login.spec.ts" time="0.568"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/Logout.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="2" failures="0" skipped="0" time="8.962" errors="0">
+  
+  <testcase name="Logout tests › Logs out after confirmation of dialog for unsaved changes on exercise mode" classname="e2e/Logout.spec.ts" time="4.448"></testcase>
+  
+  <testcase name="Logout tests › Stays logged in after dismissal of dialog for unsaved changes on exercise mode" classname="e2e/Logout.spec.ts" time="4.514"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/SystemHealth.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="fast-tests" tests="8" failures="0" skipped="0" time="2.104" errors="0">
+  
+  <testcase name="Check artemis system health › Checks continuous integration server health" classname="e2e/SystemHealth.spec.ts" time="0.572"></testcase>
+  
+  <testcase name="Check artemis system health › Checks version control server health" classname="e2e/SystemHealth.spec.ts" time="0.009"></testcase>
+  
+  <testcase name="Check artemis system health › Checks db health" classname="e2e/SystemHealth.spec.ts" time="0.612"></testcase>
+  
+  <testcase name="Check artemis system health › Checks hazelcast health" classname="e2e/SystemHealth.spec.ts" time="0.008"></testcase>
+  
+  <testcase name="Check artemis system health › Checks ping health" classname="e2e/SystemHealth.spec.ts" time="0.41"></testcase>
+  
+  <testcase name="Check artemis system health › Checks readiness state health" classname="e2e/SystemHealth.spec.ts" time="0.003"></testcase>
+  
+  <testcase name="Check artemis system health › Checks websocket broker health" classname="e2e/SystemHealth.spec.ts" time="0.488"></testcase>
+  
+  <testcase name="Check artemis system health › Checks websocket connection health" classname="e2e/SystemHealth.spec.ts" time="0.002"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamAssessment.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="6" failures="0" skipped="0" time="116.064" errors="0">
+  
+  <testcase name="Exam assessment › Modeling exercise assessment › Assess a modeling exercise submission" classname="e2e/exam/ExamAssessment.spec.ts" time="46.878"></testcase>
+  
+  <testcase name="Exam assessment › Modeling exercise assessment › Complaints about modeling exercises assessment" classname="e2e/exam/ExamAssessment.spec.ts" time="5.04"></testcase>
+  
+  <testcase name="Exam assessment › Text exercise assessment › Assess a text exercise submission" classname="e2e/exam/ExamAssessment.spec.ts" time="16.673"></testcase>
+  
+  <testcase name="Exam assessment › Text exercise assessment › Instructor makes a second round of assessment" classname="e2e/exam/ExamAssessment.spec.ts" time="4.383"></testcase>
+  
+  <testcase name="Exam assessment › Text exercise assessment › Complaints about text exercises assessment" classname="e2e/exam/ExamAssessment.spec.ts" time="5.757"></testcase>
+  
+  <testcase name="Exam assessment › Quiz exercise assessment › Assesses quiz automatically" classname="e2e/exam/ExamAssessment.spec.ts" time="37.333"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamChecklists.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="3" failures="0" skipped="2" time="12.902" errors="0">
+  
+  <testcase name="Exam Checklists › Student makes a submission and missing assessment check is marked for instructor after assessment" classname="e2e/exam/ExamChecklists.spec.ts" time="12.902"></testcase>
+  
+  <testcase name="Exam Checklists › Student makes a quiz submission and unassessed quizzes check is marked for instructor after assessment" classname="e2e/exam/ExamChecklists.spec.ts" time="0">
+    
+    <properties>
+      
+      <property name="skip" value=""></property>
+      
+    </properties>
+    
+    <skipped></skipped>
+    
+  </testcase>
+  
+  <testcase name="Exam Checklists › Student does not submit the exam on time and corresponding check is marked" classname="e2e/exam/ExamChecklists.spec.ts" time="0">
+    
+    <properties>
+      
+      <property name="skip" value=""></property>
+      
+    </properties>
+    
+    <skipped></skipped>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="8" failures="2" skipped="0" time="255.214" errors="0">
+  
+  <testcase name="Exam participation › Early Hand-in › Participates as a student in a registered exam" classname="e2e/exam/ExamParticipation.spec.ts" time="69.537">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam participation › Early Hand-in › Using navigation sidebar to navigate within exam" classname="e2e/exam/ExamParticipation.spec.ts" time="29.982">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam participation › Early Hand-in › Using exercise overview to navigate within exam" classname="e2e/exam/ExamParticipation.spec.ts" time="32.327">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam participation › Early hand-in with continue and reload page › Participates in the exam, hand-in early, but instead continues" classname="e2e/exam/ExamParticipation.spec.ts" time="26.926"></testcase>
+  
+  <testcase name="Exam participation › Early hand-in with continue and reload page › Reloads exam page during participation and ensures that everything is as expected" classname="e2e/exam/ExamParticipation.spec.ts" time="19.153"></testcase>
+  
+  <testcase name="Exam participation › Early hand-in with continue and reload page › Reloads exam result page and ensures that everything is as expected" classname="e2e/exam/ExamParticipation.spec.ts" time="19.078"></testcase>
+  
+  <testcase name="Exam participation › Exam announcements › Instructor sends an announcement message and all participants receive it" classname="e2e/exam/ExamParticipation.spec.ts" time="27.311">
+    
+    <failure message="ExamParticipation.spec.ts:281:13 Instructor sends an announcement message and all participants receive it" type="FAILURE">
+      
+      <![CDATA[[slow-tests] › e2e/exam/ExamParticipation.spec.ts:281:13 › Exam participation › Exam announcements › Instructor sends an announcement message and all participants receive it @slow 
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+
+
+       at support/pageobjects/exam/ExamManagementPage.ts:127
+
+      125 |         await expect(announcementDialog.locator('.date').getByText(new RegExp(`(${announcementTimeFormatted}|${announcementTimeAfterMinute})`))).toBeVisible();
+      126 |         await expect(announcementDialog.locator('.content').getByText(message)).toBeVisible();
+    > 127 |         await expect(announcementDialog.locator('.author').getByText(authorUsername)).toBeVisible();
+          |                                                                                       ^
+      128 |     }
+      129 |
+      130 |     async sendAnnouncement() {
+        at ExamManagementPage.verifyAnnouncementContent (/app/artemis/src/test/playwright/support/pageobjects/exam/ExamManagementPage.ts:127:87)
+        at /app/artemis/src/test/playwright/e2e/exam/ExamParticipation.spec.ts:307:17
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+
+
+       at support/pageobjects/exam/ExamManagementPage.ts:127
+
+      125 |         await expect(announcementDialog.locator('.date').getByText(new RegExp(`(${announcementTimeFormatted}|${announcementTimeAfterMinute})`))).toBeVisible();
+      126 |         await expect(announcementDialog.locator('.content').getByText(message)).toBeVisible();
+    > 127 |         await expect(announcementDialog.locator('.author').getByText(authorUsername)).toBeVisible();
+          |                                                                                       ^
+      128 |     }
+      129 |
+      130 |     async sendAnnouncement() {
+        at ExamManagementPage.verifyAnnouncementContent (/app/artemis/src/test/playwright/support/pageobjects/exam/ExamManagementPage.ts:127:87)
+        at /app/artemis/src/test/playwright/e2e/exam/ExamParticipation.spec.ts:307:17
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-exam-ExamParticipation-6d885-all-participants-receive-it-slow-tests-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-exam-ExamParticipation-6d885-all-participants-receive-it-slow-tests-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────]]>
+      
+    </failure>
+    
+    <system-out>
+      
+      <![CDATA[[[ATTACHMENT|../test-results/e2e-exam-ExamParticipation-6d885-all-participants-receive-it-slow-tests-retry1/trace.zip]]]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam participation › Exam announcements › Instructor changes working time and all participants are informed" classname="e2e/exam/ExamParticipation.spec.ts" time="30.9">
+    
+    <failure message="ExamParticipation.spec.ts:320:13 Instructor changes working time and all participants are informed" type="FAILURE">
+      
+      <![CDATA[[slow-tests] › e2e/exam/ExamParticipation.spec.ts:320:13 › Exam participation › Exam announcements › Instructor changes working time and all participants are informed @slow 
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+
+
+       at support/pageobjects/exam/ModalDialogBox.ts:32
+
+      30 |
+      31 |     async checkDialogAuthor(authorUsername: string) {
+    > 32 |         await expect(this.getModalDialogContent().locator('.author').getByText(authorUsername)).toBeVisible();
+         |                                                                                                 ^
+      33 |     }
+      34 |
+      35 |     async checkExamTimeChangeDialog(previousWorkingTime: string, newWorkingTime: string) {
+        at ModalDialogBox.checkDialogAuthor (/app/artemis/src/test/playwright/support/pageobjects/exam/ModalDialogBox.ts:32:97)
+        at /app/artemis/src/test/playwright/e2e/exam/ExamParticipation.spec.ts:352:35
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toBeVisible()
+
+    Locator: locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+    Expected: visible
+    Received: <element(s) not found>
+    Call log:
+      - expect.toBeVisible with timeout 5000ms
+      - waiting for locator('.modal-content').locator('.author').getByText('artemis_test_user_16')
+
+
+       at support/pageobjects/exam/ModalDialogBox.ts:32
+
+      30 |
+      31 |     async checkDialogAuthor(authorUsername: string) {
+    > 32 |         await expect(this.getModalDialogContent().locator('.author').getByText(authorUsername)).toBeVisible();
+         |                                                                                                 ^
+      33 |     }
+      34 |
+      35 |     async checkExamTimeChangeDialog(previousWorkingTime: string, newWorkingTime: string) {
+        at ModalDialogBox.checkDialogAuthor (/app/artemis/src/test/playwright/support/pageobjects/exam/ModalDialogBox.ts:32:97)
+        at /app/artemis/src/test/playwright/e2e/exam/ExamParticipation.spec.ts:352:35
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-exam-ExamParticipation-bff3e-l-participants-are-informed-slow-tests-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-exam-ExamParticipation-bff3e-l-participants-are-informed-slow-tests-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────]]>
+      
+    </failure>
+    
+    <system-out>
+      
+      <![CDATA[[[ATTACHMENT|../test-results/e2e-exam-ExamParticipation-bff3e-l-participants-are-informed-slow-tests-retry1/trace.zip]]]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamResults.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="3" failures="0" skipped="0" time="105.946" errors="0">
+  
+  <testcase name="Exam Results › Check exam exercise results › Check exam results for text exercise › Check exam text exercise results" classname="e2e/exam/ExamResults.spec.ts" time="34.824"></testcase>
+  
+  <testcase name="Exam Results › Check exam exercise results › Check exam results for quiz exercise › Check exam quiz exercise results" classname="e2e/exam/ExamResults.spec.ts" time="33.119"></testcase>
+  
+  <testcase name="Exam Results › Check exam exercise results › Check exam results for modeling exercise › Check exam modeling exercise results" classname="e2e/exam/ExamResults.spec.ts" time="38.003"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/test-exam/TestExamParticipation.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="4" failures="0" skipped="0" time="197.251" errors="0">
+  
+  <testcase name="Test exam participation › Early Hand-in › Participates as a student in a registered test exam" classname="e2e/exam/test-exam/TestExamParticipation.spec.ts" time="52.174">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Test exam participation › Early Hand-in › Using exercise sidebar to navigate within exam" classname="e2e/exam/test-exam/TestExamParticipation.spec.ts" time="62.229">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)
+Could not find test cases yet, retrying... (6 / 20)
+Could not find test cases yet, retrying... (7 / 20)
+Retrying delete course request due to failure]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Test exam participation › Early Hand-in › Using exercise overview to navigate within exam" classname="e2e/exam/test-exam/TestExamParticipation.spec.ts" time="61.282">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)
+Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)
+Could not find test cases yet, retrying... (6 / 20)
+Could not find test cases yet, retrying... (7 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Test exam participation › Normal Hand-in › Participates as a student in a registered exam" classname="e2e/exam/test-exam/TestExamParticipation.spec.ts" time="21.566"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/test-exam/TestExamStudentExams.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="2" failures="0" skipped="0" time="46.68" errors="0">
+  
+  <testcase name="Test Exam - student exams › Check exam participants and their submissions › Open the list of exam students" classname="e2e/exam/test-exam/TestExamStudentExams.spec.ts" time="23.658"></testcase>
+  
+  <testcase name="Test Exam - student exams › Check exam participants and their submissions › Search for a student in exams" classname="e2e/exam/test-exam/TestExamStudentExams.spec.ts" time="23.022"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/test-exam/TestExamTestRun.spec.ts" timestamp="2025-03-14T21:21:40.910Z" hostname="slow-tests" tests="3" failures="0" skipped="0" time="87.366" errors="0">
+  
+  <testcase name="Test exam test run › Creates a test run" classname="e2e/exam/test-exam/TestExamTestRun.spec.ts" time="22.657">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Test exam test run › Manage a test run › Conducts a test run" classname="e2e/exam/test-exam/TestExamTestRun.spec.ts" time="38.552">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Test exam test run › Delete a test run › Deletes a test run" classname="e2e/exam/test-exam/TestExamTestRun.spec.ts" time="26.157">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)
+Could not find test cases yet, retrying... (4 / 20)
+Could not find test cases yet, retrying... (5 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="e2e/exam/ExamAssessment.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="3" failures="0" skipped="0" time="158.116" errors="0">
+  
+  <testcase name="Exam assessment › Programming exercise assessment › Assess a programming exercise submission (MANUAL)" classname="e2e/exam/ExamAssessment.spec.ts" time="87.177">
+    
+    <properties>
+      
+      <property name="slow" value=""></property>
+      
+    </properties>
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Could not find test cases yet, retrying... (3 / 20)]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Exam assessment › Programming exercise assessment › Complaints about programming exercises assessment" classname="e2e/exam/ExamAssessment.spec.ts" time="5.019"></testcase>
+  
+  <testcase name="Exam statistics › Check exam statistics" classname="e2e/exam/ExamAssessment.spec.ts" time="65.92"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamParticipation.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="1" failures="0" skipped="0" time="42.192" errors="0">
+  
+  <testcase name="Exam participation › Normal Hand-in › Participates as a student in a registered exam" classname="e2e/exam/ExamParticipation.spec.ts" time="42.192"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exam/ExamResults.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="1" failures="0" skipped="0" time="96.932" errors="0">
+  
+  <testcase name="Exam Results › Check exam exercise results › Check exam results for programming exercise › Check exam programming exercise results" classname="e2e/exam/ExamResults.spec.ts" time="96.932">
+    
+    <system-out>
+      
+      <![CDATA[Could not find test cases yet, retrying... (1 / 20)
+Could not find test cases yet, retrying... (2 / 20)
+Retrying delete course request due to failure]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/ExerciseImport.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="1" failures="0" skipped="0" time="28.895" errors="0">
+  
+  <testcase name="Import exercises › Imports exercises › Imports programming exercise" classname="e2e/exercise/ExerciseImport.spec.ts" time="28.895"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/programming/ProgrammingExerciseAssessment.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="1" failures="0" skipped="0" time="40.203" errors="0">
+  
+  <testcase name="Programming exercise assessment › Assesses the programming exercise submission and verifies it" classname="e2e/exercise/programming/ProgrammingExerciseAssessment.spec.ts" time="40.203"></testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="17" failures="2" skipped="0" time="930.37" errors="0">
+  
+  <testcase name="Programming exercise participation › Makes a failing Java submission › Makes a submission using code editor" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="16.07">
+    
+    <system-out>
+      
+      <![CDATA[Retrying delete course request due to failure]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Makes a failing Java submission › Makes a git submission through HTTPS" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="11.621">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:artemis_test_user_password_1@artemis-app-node-2:8080/git/PLAYWRIGHTDA560D3FAPROGRAMMING3ACBC4F12/playwrightda560d3faprogramming3acbc4f12-artemis_test_user_1.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+    <system-err>
+      
+      <![CDATA[(node:6009) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)]]>
+      
+    </system-err>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Makes a partially successful Java submission › Makes a submission using code editor" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="19.942"></testcase>
+  
+  <testcase name="Programming exercise participation › Makes a partially successful Java submission › Makes a git submission through HTTPS" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="12.05">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:artemis_test_user_password_1@artemis-app-node-2:8080/git/PLAYWRIGHTE3C235999PROGRAMMING919F5F147/playwrighte3c235999programming919f5f147-artemis_test_user_1.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Makes a successful Java submission › Makes a submission using code editor" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="26.167"></testcase>
+  
+  <testcase name="Programming exercise participation › Makes a successful Java submission › Makes a git submission through HTTPS" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="12.193">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:artemis_test_user_password_1@artemis-app-node-2:8080/git/PLAYWRIGHTC2BE5875CPROGRAMMING03995EC18/playwrightc2be5875cprogramming03995ec18-artemis_test_user_1.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Makes a successful C submission › Makes a submission using code editor" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="52.496">
+    
+    <system-out>
+      
+      <![CDATA[[[ATTACHMENT|../test-results/e2e-exercise-programming-P-62367-ubmission-using-code-editor-sequential-tests-retry1/trace.zip]]]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Makes a successful C submission › Makes a git submission through HTTPS" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="7.68">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:artemis_test_user_password_1@artemis-app-node-2:8080/git/PLAYWRIGHTEB6D71A91PROGRAMMING1EEEA5241/playwrighteb6d71a91programming1eeea5241-artemis_test_user_1.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+    <system-err>
+      
+      <![CDATA[(node:6591) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)]]>
+      
+    </system-err>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Makes a successful Python submission › Makes a submission using code editor" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="18.572"></testcase>
+  
+  <testcase name="Programming exercise participation › Makes a successful Python submission › Makes a git submission through HTTPS" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="6.929">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:artemis_test_user_password_1@artemis-app-node-2:8080/git/PLAYWRIGHT1AEBC283EPROGRAMMING42A7192F2/playwright1aebc283eprogramming42a7192f2-artemis_test_user_1.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise participation using secure git › Makes a git submission through HTTPS using token" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="12.633">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:vcpat-zYjD4Pm1rrpeTOoDLOOmMBQ1agEglUtb8RuzFHVjmG2q@artemis-app-node-2:8080/git/PLAYWRIGHTE84646149PROGRAMMING510A487F7/playwrighte84646149programming510a487f7-artemis_test_user_1.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise participation using secure git › Programming exercise participation using SSH › Makes a git submission using SSH with RSA key" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="283.942">
+    
+    <failure message="ProgrammingExerciseParticipation.spec.ts:116:21 Makes a git submission using SSH with RSA key" type="FAILURE">
+      
+      <![CDATA[[sequential-tests] › e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts:116:21 › Programming exercise participation › Programming exercise participation using secure git › Programming exercise participation using SSH › Makes a git submission using SSH with RSA key @sequential 
+
+    Error: Cloning into './test-exercise-repos/playwright6cd617d72programmingd0a146041-artemis_test_user_1.git'...
+    ssh: connect to host github-l-16.ase.cit.tum.de port 7921: Connection timed out
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+        at Object.action (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)
+        at PluginStore.exec (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)
+        at /app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42
+        at GitExecutorChain.handleTaskData (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)
+        at GitExecutorChain.<anonymous> (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)
+        at fulfilled (/app/artemis/src/test/playwright/node_modules/simple-git/dist/cjs/index.js:52:24)
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Cloning into './test-exercise-repos/playwright2169c0b11programming1c9e6950b-artemis_test_user_1.git'...
+    ssh: connect to host github-l-16.ase.cit.tum.de port 7921: Connection timed out
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+        at Object.action (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)
+        at PluginStore.exec (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)
+        at /app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42
+        at GitExecutorChain.handleTaskData (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)
+        at GitExecutorChain.<anonymous> (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)
+        at fulfilled (/app/artemis/src/test/playwright/node_modules/simple-git/dist/cjs/index.js:52:24)
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-exercise-programming-P-d3787-sion-using-SSH-with-RSA-key-sequential-tests-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-exercise-programming-P-d3787-sion-using-SSH-with-RSA-key-sequential-tests-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────]]>
+      
+    </failure>
+    
+    <system-out>
+      
+      <![CDATA[Setting up SSH credentials with key artemis_playwright_rsa
+Cloning repository from ssh://git@github-l-16.ase.cit.tum.de:7921/git/PLAYWRIGHT6CD617D72PROGRAMMINGD0A146041/playwright6cd617d72programmingd0a146041-artemis_test_user_1.git
+Setting up SSH credentials with key artemis_playwright_rsa
+Cloning repository from ssh://git@github-l-16.ase.cit.tum.de:7921/git/PLAYWRIGHT2169C0B11PROGRAMMING1C9E6950B/playwright2169c0b11programming1c9e6950b-artemis_test_user_1.git
+
+[[ATTACHMENT|../test-results/e2e-exercise-programming-P-d3787-sion-using-SSH-with-RSA-key-sequential-tests-retry1/trace.zip]]]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise participation using secure git › Programming exercise participation using SSH › Makes a git submission using SSH with ED25519 key" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="284.995">
+    
+    <failure message="ProgrammingExerciseParticipation.spec.ts:116:21 Makes a git submission using SSH with ED25519 key" type="FAILURE">
+      
+      <![CDATA[[sequential-tests] › e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts:116:21 › Programming exercise participation › Programming exercise participation using secure git › Programming exercise participation using SSH › Makes a git submission using SSH with ED25519 key @sequential 
+
+    Error: Cloning into './test-exercise-repos/playwright2865e02d4programming008702780-artemis_test_user_1.git'...
+    ssh: connect to host github-l-16.ase.cit.tum.de port 7921: Connection timed out
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+        at Object.action (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)
+        at PluginStore.exec (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)
+        at /app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42
+        at GitExecutorChain.handleTaskData (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)
+        at GitExecutorChain.<anonymous> (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)
+        at fulfilled (/app/artemis/src/test/playwright/node_modules/simple-git/dist/cjs/index.js:52:24)
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: Cloning into './test-exercise-repos/playwright6b4a553e5programming09d83631e-artemis_test_user_1.git'...
+    ssh: connect to host github-l-16.ase.cit.tum.de port 7921: Connection timed out
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+
+        at Object.action (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/error-detection.plugin.ts:42:29)
+        at PluginStore.exec (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/plugins/plugin-store.ts:54:29)
+        at /app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:124:42
+        at GitExecutorChain.handleTaskData (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:121:14)
+        at GitExecutorChain.<anonymous> (/app/artemis/src/test/playwright/node_modules/simple-git/src/lib/runners/git-executor-chain.ts:97:40)
+        at fulfilled (/app/artemis/src/test/playwright/node_modules/simple-git/dist/cjs/index.js:52:24)
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/e2e-exercise-programming-P-bbf77--using-SSH-with-ED25519-key-sequential-tests-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/e2e-exercise-programming-P-bbf77--using-SSH-with-ED25519-key-sequential-tests-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────]]>
+      
+    </failure>
+    
+    <system-out>
+      
+      <![CDATA[Setting up SSH credentials with key artemis_playwright_ed25519
+Cloning repository from ssh://git@github-l-16.ase.cit.tum.de:7921/git/PLAYWRIGHT2865E02D4PROGRAMMING008702780/playwright2865e02d4programming008702780-artemis_test_user_1.git
+Setting up SSH credentials with key artemis_playwright_ed25519
+Cloning repository from ssh://git@github-l-16.ase.cit.tum.de:7921/git/PLAYWRIGHT6B4A553E5PROGRAMMING09D83631E/playwright6b4a553e5programming09d83631e-artemis_test_user_1.git
+
+[[ATTACHMENT|../test-results/e2e-exercise-programming-P-bbf77--using-SSH-with-ED25519-key-sequential-tests-retry1/trace.zip]]]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise team participation › Team members make git submissions" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="135.477">
+    
+    <system-out>
+      
+      <![CDATA[Cloning repository from http://artemis_test_user_1:artemis_test_user_password_1@artemis-app-node-2:8080/git/PLAYWRIGHT381CEC093PROGRAMMING4BB0E2752/playwright381cec093programming4bb0e2752-team35a4866a8.git
+Cloned repository successfully. Pushing files...
+Cloning repository from http://artemis_test_user_2:artemis_test_user_password_2@artemis-app-node-2:8080/git/PLAYWRIGHT381CEC093PROGRAMMING4BB0E2752/playwright381cec093programming4bb0e2752-team35a4866a8.git
+Cloned repository successfully. Pushing files...]]>
+      
+    </system-out>
+    
+    <system-err>
+      
+      <![CDATA[(node:7216) [DEP0147] DeprecationWarning: In future versions of Node.js, fs.rmdir(path, { recursive: true }) will be removed. Use fs.rm(path, { recursive: true }) instead
+(Use `node --trace-deprecation ...` to show where the warning was created)]]>
+      
+    </system-err>
+    
+  </testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise team participation › Students without a team can not participate in the team exercise" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="4.186"></testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise team participation › Students of other teams have their own submission" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="6.13"></testcase>
+  
+  <testcase name="Programming exercise participation › Programming exercise team participation › Check team participation › Instructor checks the participation" classname="e2e/exercise/programming/ProgrammingExerciseParticipation.spec.ts" time="19.287">
+    
+    <system-out>
+      
+      <![CDATA[Waiting for build of an exercise to finish...
+Waiting for build of an exercise to finish...]]>
+      
+    </system-out>
+    
+  </testcase>
+  
+</testsuite>
+<testsuite name="e2e/exercise/programming/ProgrammingExerciseStaticCodeAnalysis.spec.ts" timestamp="2025-03-14T21:30:52.738Z" hostname="sequential-tests" tests="1" failures="0" skipped="0" time="42.387" errors="0">
+  
+  <testcase name="Static code analysis tests › Configures SCA grading and makes a successful submission with SCA errors" classname="e2e/exercise/programming/ProgrammingExerciseStaticCodeAnalysis.spec.ts" time="42.387"></testcase>
+  
+</testsuite>
+
+</testsuites>
