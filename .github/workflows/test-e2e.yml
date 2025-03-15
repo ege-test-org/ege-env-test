@@ -58,7 +58,7 @@ jobs:
       - name: Echo github.event.workflow_run
         run: echo '${{ toJSON(github.event.workflow_run) }}'
       - name: Sleep
-        run: sleep 15 && exit 1
+        run: sleep 15
       - name: Parse test results and update status
         if: always()
         run: |
