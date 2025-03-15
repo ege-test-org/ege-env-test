@@ -32,9 +32,60 @@ jobs:
       )
     runs-on: ubuntu-latest
     steps:
+      - name: Create pending status
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
+            -d '{"state":"pending","context":"E2E Tests","description":"E2E tests are running...","target_url":"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}'
+      
       - name: Git Checkout
         uses: actions/checkout@v4
       - name: Echo github.event
         run: echo '${{ toJSON(github.event) }}'
       - name: Echo github.event.workflow_run
         run: echo '${{ toJSON(github.event.workflow_run) }}'
+      - name: Sleep
+        run: sleep 120
+      - name: Parse test results and update status
+        if: always()
+        run: |
+          # Determine workflow status
+          WORKFLOW_STATUS="${{ job.status }}"
+          
+          # Default values for metrics
+          TOTAL=0
+          PASSED=0
+          FAILED=0
+          SKIPPED=0
+          
+          # Check if test results file exists
+          if [ -f "src/test/playwright/test-reports/results.xml" ]; then
+            # Parse XML to extract test metrics
+            TOTAL=$(grep -o 'tests="[0-9]*"' src/test/playwright/test-reports/results.xml | grep -o '[0-9]*')
+            FAILED=$(grep -o 'failures="[0-9]*"' src/test/playwright/test-reports/results.xml | grep -o '[0-9]*')
+            SKIPPED=$(grep -o 'skipped="[0-9]*"' src/test/playwright/test-reports/results.xml | grep -o '[0-9]*')
+            PASSED=$((TOTAL - FAILED - SKIPPED))
+          fi
+          
+          # Determine GitHub status state based on workflow status
+          if [ "$WORKFLOW_STATUS" = "success" ]; then
+            STATE="success"
+            DESCRIPTION="✅ E2E tests passed: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+          elif [ "$WORKFLOW_STATUS" = "failure" ]; then
+            STATE="failure"
+            DESCRIPTION="❌ E2E tests failed: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+          else
+            STATE="error"
+            DESCRIPTION="⚠️ E2E tests encountered an error"
+          fi
+          
+          # Update status
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}" \
+            -d "{\"state\":\"$STATE\",\"context\":\"E2E Tests\",\"description\":\"$DESCRIPTION\",\"target_url\":\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+
+
