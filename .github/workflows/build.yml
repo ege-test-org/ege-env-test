@@ -1,0 +1,47 @@
+name: Build
+# The name of this workflow (Build) should be in sync with the test-e2e.yml workflow's workflow_run listener.
+
+on:
+  pull_request:
+    paths-ignore:
+    - 'README.md'
+    - 'CODE_OF_CONDUCT.md'
+    - 'CONTRIBUTING.md'
+    - 'LICENSE'
+    - 'SECURITY.md'
+    - 'docs/**'
+    - '.github/**'
+    - '!.github/workflows/build.yml'
+    - '!.github/workflows/test-e2e.yml'
+  push:
+    branches:
+    - develop
+    - main
+    - release/*
+    tags: '[0-9]+.[0-9]+.[0-9]+'
+    paths-ignore:
+    - 'README.md'
+    - 'CODE_OF_CONDUCT.md'
+    - 'CONTRIBUTING.md'
+    - 'LICENSE'
+    - 'SECURITY.md'
+    - 'docs/**'
+    - '.github/**'
+    - '!.github/workflows/build.yml'    
+    - '!.github/workflows/test-e2e.yml'
+  release:
+    types:
+    - created
+
+# Keep this filename in sync with the filename environment variable (PR_AUTO_BUILD_FILE_NAME) in the testserver-deployment.yml workflow
+# and with the build_workflow_name environment variable in the staging-deployment.yml workflow
+
+jobs:
+
+  define-inputs:
+    name: Define Inputs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: |
+          echo "test build"
