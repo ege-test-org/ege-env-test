@@ -108,7 +108,7 @@ jobs:
           fi
 
           DESCRIPTION_ESCAPED=$(echo "$DESCRIPTION" | sed 's/"/\\"/g')
-          JSON_PAYLOAD="{\"state\":\"$STATE\",\"context\":\"${{ env.STATUS_CONTEXT }}\",\"description\":\"$DESCRIPTION_ESCAPED\",\"target_url\":\"${{ env.TARGET_URL }}\"}"
+          JSON_PAYLOAD='{"state":"$STATE","context":"${{ env.STATUS_CONTEXT }}","description":"$DESCRIPTION_ESCAPED","target_url":"${{ env.TARGET_URL }}"}'
           echo "JSON payload: $JSON_PAYLOAD"
           
           # Update status
