@@ -29,18 +29,18 @@ jobs:
     - name: Send greeting
       run: |
         echo "Branch: ${{ github.event.inputs.branch_name }}"
-        echo "Environment: ${{ github.event.inputs.environment_name }}"
-        echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
-    - name: Send greeting
-      run: |
-        echo "Branch: ${{ github.event.inputs.branch_name }}"
-        sleep 15
-        echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
-    - name: Send greeting
-      run: |
-        echo "Branch: ${{ github.event.inputs.branch_name }}"
-        echo "Environment: ${{ github.event.inputs.environment_name }}"
-        echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
+    #     echo "Environment: ${{ github.event.inputs.environment_name }}"
+    #     echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
+    # - name: Send greeting
+    #   run: |
+    #     echo "Branch: ${{ github.event.inputs.branch_name }}"
+    #     sleep 15
+    #     echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
+    # - name: Send greeting
+    #   run: |
+    #     echo "Branch: ${{ github.event.inputs.branch_name }}"
+    #     echo "Environment: ${{ github.event.inputs.environment_name }}"
+    #     echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
 
   deploy:
     environment: ${{ github.event.inputs.environment_name }}
