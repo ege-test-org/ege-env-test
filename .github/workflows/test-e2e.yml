@@ -46,7 +46,6 @@ jobs:
         run: |
           echo "::notice title=Triggered by workflow run::This E2E test was triggered by workflow run #${{ github.event.workflow_run.id }} - View it at https://github.com/${{ github.repository }}/actions/runs/${{ github.event.workflow_run.id }}"
 
-
       - name: Create pending status
         run: |
           curl -X POST \
