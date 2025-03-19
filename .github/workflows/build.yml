@@ -35,7 +35,6 @@ on:
 # and with the build_workflow_name environment variable in the staging-deployment.yml workflow
 
 jobs:
-
   define-inputs:
     name: Define Inputs
     runs-on: ubuntu-latest
