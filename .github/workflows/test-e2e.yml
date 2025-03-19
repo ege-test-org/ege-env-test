@@ -40,6 +40,7 @@ jobs:
           name: workflow-context
           path: workflow-context.txt
 
+
       # Add a notice in this workflow's timeline showing which Build workflow triggered it
       # This helps developers navigate between related workflows
       - name: Add link to triggering workflow
@@ -71,7 +72,7 @@ jobs:
           if-no-files-found: error
           path: src/test/playwright/test-reports/*.xml
       - name: Echo github.event
-        run: echo '${{ toJSON(github.event) }}'
+        run: echo '${{ toJSON(github.event) }}' && sleep 30
       - name: Echo github.event.workflow_run
         run: echo '${{ toJSON(github.event.workflow_run) }}'
       - name: Sleep
