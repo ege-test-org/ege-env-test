@@ -72,7 +72,7 @@ jobs:
           if-no-files-found: error
           path: src/test/playwright/test-reports/*.xml
       - name: Echo github.event
-        run: echo '${{ toJSON(github.event) }}' && sleep 30
+        run: echo '${{ toJSON(github.event) }}' && sleep 5
       - name: Echo github.event.workflow_run
         run: echo '${{ toJSON(github.event.workflow_run) }}'
       - name: Sleep
