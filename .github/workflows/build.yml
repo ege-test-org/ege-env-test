@@ -1,4 +1,4 @@
-name: Build Build- BuildBuildBuildBuilduild Build- BuildBuildBuildBuiluild Build- BuildBuildBuildBuil
+name: Build
 # The name of this workflow (Build) should be in sync with the test-e2e.yml workflow's workflow_run listener.
 
 on:
@@ -45,13 +45,13 @@ jobs:
           echo "test build"
       - name: Git Checkout
         uses: actions/checkout@v4
-      - name: Upload JUnit Test Results
-        if: success() || failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: JUnit Test Results
-          if-no-files-found: error
-          path: src/test/playwright/test-reports/*.xml
+      # - name: Upload JUnit Test Results
+      #   if: success() || failure()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: JUnit Test Results
+      #     if-no-files-found: error
+      #     path: src/test/playwright/test-reports/*.xml
 
 
 
