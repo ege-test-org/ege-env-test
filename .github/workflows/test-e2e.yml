@@ -25,6 +25,17 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
+      - name: Echo github.event.workflow_run.event
+        run: echo '${{ toJSON(github.event.workflow_run.event) }}'
+      - name: Echo github.event.workflow_run
+        run: echo '${{ toJSON(github.event.workflow_run) }}'
+      - name: Echo github.event
+        run: echo '${{ toJSON(github.event) }}'
+      - name: Echo github.event.workflow_run
+        run: echo '${{ toJSON(github.event.workflow_run) }}'
+
+      
+      
       - name: Create pending status
         run: |
           curl -X POST \
@@ -70,10 +81,6 @@ jobs:
           name: JUnit Test Results
           if-no-files-found: error
           path: src/test/playwright/test-reports/*.xml
-      - name: Echo github.event
-        run: echo '${{ toJSON(github.event) }}'
-      - name: Echo github.event.workflow_run
-        run: echo '${{ toJSON(github.event.workflow_run) }}'
       - name: Sleep
         run: sleep 15
       - name: Parse test results and update status
