@@ -26,6 +26,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
+      - name: Run on pull_request
+        if: ${{ github.event.workflow_run.event == 'pull_request' }}
+        run: echo 'yessss ${{ github.event.workflow_run.pull_requests }}'
+      - name: Run on push
+        if: ${{ github.event.workflow_run.event != 'pull_request' }}
+        run: echo 'push ${{ github.event.workflow_run.pull_requests }}'
       - name: Echo github.event.workflow_run.event
         run: echo '${{ toJSON(github.event.workflow_run.event) }}'
       - name: Echo github.event.workflow_run
