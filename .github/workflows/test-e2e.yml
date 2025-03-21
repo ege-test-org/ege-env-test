@@ -25,6 +25,26 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
+      - name: Download Docker tag
+        uses: actions/download-artifact@v4
+        with:
+          name: docker-tag
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+      - name: Set Docker Tag Environment Variable
+        run: |
+          if [ -f "docker-tag.txt" ]; then
+            ARTEMIS_DOCKER_TAG=$(cat docker-tag.txt)
+            echo "ARTEMIS_DOCKER_TAG=${ARTEMIS_DOCKER_TAG}" >> $GITHUB_ENV
+            echo "Using Docker tag: ${ARTEMIS_DOCKER_TAG}"
+          else
+            echo "::error::No docker-tag.txt found in the previous build workflow! Artifact is needed to run E2E tests."
+            exit 1
+          fi
+      - name: echo ARTEMIS_DOCKER_TAG
+        run: |
+          echo $ARTEMIS_DOCKER_TAG
+
       - name: Run on pull_request
         if: ${{ github.event.workflow_run.event == 'pull_request' }}
         run: echo 'yessss ${{ github.event.workflow_run.pull_requests }}'
