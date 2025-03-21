@@ -55,7 +55,21 @@ jobs:
       #     if-no-files-found: error
       #     path: src/test/playwright/test-reports/*.xml
 
-
+  # Save Docker image tag as an artifact
+  save-docker-tag:
+    name: Save Docker Image Tag
+    needs: define-inputs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Save Docker Tag to File
+        run: |
+          echo "pr-1564654" > docker-tag.txt
+          echo "Using Docker tag: pr-1564654"
+      - name: Upload Docker Tag as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-tag
+          path: docker-tag.txt
 
 
 
