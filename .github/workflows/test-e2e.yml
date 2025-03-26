@@ -157,7 +157,6 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
         with:
           commit: ${{ github.event.workflow_run.head_sha }}
-          annotate_only: true
           fail_on_failure: true
           require_tests: true
           require_passed_tests: true
@@ -168,6 +167,8 @@ jobs:
           comment: true
           updateComment: false
           report_paths: 'src/test/playwright/test-reports/results.xml'
+
+# annotate_only: true
 
       - name: Update status with results
         if: always()
