@@ -199,6 +199,9 @@ jobs:
             "${{ env.STATUSES_REQUEST_URL }}" \
             -d "$JSON_PAYLOAD"
 
+      - name: Dump github.event to JSON file for test result publish
+        if: always()
+        run: echo '${{ toJson(github.event) }}' > event.json
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2.18.0
@@ -207,7 +210,7 @@ jobs:
           check_name: "End-to-End (E2E) Test Results"
           comment_title: "End-to-End (E2E) Test Results"
           commit: ${{ github.event.workflow_run.head_sha }}
-          event_name: "E2E Tests"
+          event_file: "event.json"
           action_fail: true
           pull_request_build: "commit"
           files: src/test/playwright/test-reports/results.xml
