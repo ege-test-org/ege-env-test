@@ -261,6 +261,22 @@ jobs:
             echo "pr_head_sha=" >> $GITHUB_OUTPUT
           fi
 
+
+      - name: Debug test reporter outputs
+        if: always()
+        run: |
+          echo "Test reporter outputs:"
+          echo "Total: ${{ steps.test-reporter.outputs.total }}"
+          echo "Passed: ${{ steps.test-reporter.outputs.passed }}"
+          echo "Failed: ${{ steps.test-reporter.outputs.failed }}"
+          echo "Skipped: ${{ steps.test-reporter.outputs.skipped }}"
+          echo "detailed_summary: ${{ steps.test-reporter.outputs.detailed_summary }}"
+          echo "summary: ${{ steps.test-reporter.outputs.summary }}"
+          echo "flaky_summary: ${{ steps.test-reporter.outputs.flaky_summary }}"
+          echo "Summary length: ${{ length(steps.test-reporter.outputs.detailed_summary) }}"
+          echo "Raw summary: ${{ toJSON(steps.test-reporter.outputs.detailed_summary) }}"
+
+
       # Add comment to the PR with test results
       - name: Add test results comment to PR
         if: always() && steps.find-pr.outputs.pr_number != ''
