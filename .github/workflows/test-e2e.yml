@@ -118,9 +118,9 @@ jobs:
       #     SKIPPED=0
           
       #     # Check if test results file exists
-      #     XML_FILE="src/test/playwright/test-reports/results.xml"
+      #     XML_FILE="src/test/playwright/test-reports/results-success.xml"
       #     if [ -f "$XML_FILE" ]; then
-      #       echo "Final results.xml file found, started parsing..."
+      #       echo "Final results-success.xml file found, started parsing..."
             
       #       # Sum the totals for all testsuites
       #       TESTS_COUNT=$(grep -o 'tests="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
@@ -166,7 +166,7 @@ jobs:
           include_time_in_summary: true
           group_suite: true
           updateComment: false
-          report_paths: 'src/test/playwright/test-reports/results.xml'
+          report_paths: 'src/test/playwright/test-reports/results-success.xml'
 
       - name: Update status with results
         if: always()
@@ -233,7 +233,7 @@ jobs:
       #     event_name: "workflow_run"
       #     action_fail: true
       #     pull_request_build: "commit"
-      #     files: src/test/playwright/test-reports/results.xml
+      #     files: src/test/playwright/test-reports/results-success.xml
 
       # Find the PR number
       - name: Find PR number
