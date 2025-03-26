@@ -1,4 +1,4 @@
-name: E2E Tests
+name: End-to-End (E2E) Tests
 
 on:
   workflow_run:
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  STATUS_CONTEXT: "GitHub E2E Tests"
+  STATUS_CONTEXT: "End-to-End (E2E) Tests"
   STATUSES_REQUEST_URL: "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}"
   TARGET_URL: "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
@@ -207,8 +207,8 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2.18.0
         if: always()
         with:
-          check_name: "End-to-End (E2E) Test Results"
-          comment_title: "End-to-End (E2E) Test Results"
+          check_name: "End-to-End (E2E) Tests"
+          comment_title: "End-to-End (E2E) Tests Results"
           commit: ${{ github.event.workflow_run.head_sha }}
           event_file: "event.json"
           event_name: "workflow_run"
