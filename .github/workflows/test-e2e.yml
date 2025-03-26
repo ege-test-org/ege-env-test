@@ -203,16 +203,36 @@ jobs:
         if: always()
         run: echo '${{ toJson(github.event) }}' > event.json
 
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2.18.0
+      # - name: Publish Test Results
+      #   uses: EnricoMi/publish-unit-test-result-action@v2.18.0
+      #   if: always()
+      #   with:
+      #     check_run: false
+      #     comment_title: "End-to-End (E2E) Tests Results"
+      #     commit: ${{ github.event.workflow_run.head_sha }}
+      #     event_file: "event.json"
+      #     event_name: "workflow_run"
+      #     action_fail: true
+      #     pull_request_build: "commit"
+      #     files: src/test/playwright/test-reports/results.xml
+
+
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v5
         if: always()
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
         with:
-          check_run: false
-          comment_title: "End-to-End (E2E) Tests Results"
+          check_name: "End-to-End (E2E) Tests Results"
           commit: ${{ github.event.workflow_run.head_sha }}
-          event_file: "event.json"
-          event_name: "workflow_run"
-          action_fail: true
-          pull_request_build: "commit"
-          files: src/test/playwright/test-reports/results.xml
+          fail_on_failure: true
+          require_tests: true
+          require_passed_tests: true
+          include_time_in_summary: true
+          group_suite: true
+          comment: true
+          updateComment: false
+          report_paths: 'src/test/playwright/test-reports/results.xml'
+
+
 
