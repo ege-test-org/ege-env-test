@@ -228,7 +228,10 @@ jobs:
           fail_on_failure: true
           require_tests: true
           require_passed_tests: true
+          detailed_summary: true
+          # Include table with all test results in the summary (Also applies to comment). Defaults to false.
           include_time_in_summary: true
+          flaky_summary: true
           group_suite: true
           comment: true
           updateComment: false
