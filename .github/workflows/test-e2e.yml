@@ -157,13 +157,13 @@ jobs:
           NODE_OPTIONS: "--max_old_space_size=4096"
         with:
           commit: ${{ github.event.workflow_run.head_sha }}
+          check_name: "End-to-End (E2E) Test Report"
           fail_on_failure: true
           require_tests: true
           require_passed_tests: true
           detailed_summary: true
           annotate_only: true
           include_time_in_summary: true
-          flaky_summary: true
           group_suite: true
           comment: true
           updateComment: false
@@ -283,7 +283,7 @@ jobs:
         with:
           script: |
             const prNumber = ${{ steps.find-pr.outputs.pr_number }};
-            const testSummary = `${{ steps.test-reporter.outputs.detailed_summary }}`;
+            const testSummary = `${{ steps.test-reporter.outputs.summary }} ${{ steps.test-reporter.outputs.detailed_summary }}`;
 
             github.rest.issues.createComment({
                 owner: context.repo.owner,
