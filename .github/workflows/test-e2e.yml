@@ -101,53 +101,73 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v4
       - name: Upload JUnit Test Results
-        if: success() || failure()
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: JUnit Test Results
           if-no-files-found: error
           path: src/test/playwright/test-reports/*.xml
-      - name: Parse test results and update status
-        if: always()
-        id: parse-results
-        continue-on-error: true
-        run: |
-          TOTAL=0
-          PASSED=0
-          FAILED=0
-          SKIPPED=0
+      # - name: Parse test results and update status
+      #   if: always()
+      #   id: parse-results
+      #   continue-on-error: true
+      #   run: |
+      #     TOTAL=0
+      #     PASSED=0
+      #     FAILED=0
+      #     SKIPPED=0
           
-          # Check if test results file exists
-          XML_FILE="src/test/playwright/test-reports/results.xml"
-          if [ -f "$XML_FILE" ]; then
-            echo "Final results.xml file found, started parsing..."
+      #     # Check if test results file exists
+      #     XML_FILE="src/test/playwright/test-reports/results.xml"
+      #     if [ -f "$XML_FILE" ]; then
+      #       echo "Final results.xml file found, started parsing..."
             
-            # Sum the totals for all testsuites
-            TESTS_COUNT=$(grep -o 'tests="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
-            FAILURES_COUNT=$(grep -o 'failures="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
-            SKIPPED_COUNT=$(grep -o 'skipped="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
-            set -e
+      #       # Sum the totals for all testsuites
+      #       TESTS_COUNT=$(grep -o 'tests="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+      #       FAILURES_COUNT=$(grep -o 'failures="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+      #       SKIPPED_COUNT=$(grep -o 'skipped="[0-9]*"' "$XML_FILE" | grep -o '[0-9]*' | awk '{sum+=$1} END {print sum}')
+      #       set -e
             
-            # Use values if counts were found
-            if [ -n "$TESTS_COUNT" ]; then TOTAL=$TESTS_COUNT; fi
-            if [ -n "$FAILURES_COUNT" ]; then FAILED=$FAILURES_COUNT; fi
-            if [ -n "$SKIPPED_COUNT" ]; then SKIPPED=$SKIPPED_COUNT; fi
+      #       # Use values if counts were found
+      #       if [ -n "$TESTS_COUNT" ]; then TOTAL=$TESTS_COUNT; fi
+      #       if [ -n "$FAILURES_COUNT" ]; then FAILED=$FAILURES_COUNT; fi
+      #       if [ -n "$SKIPPED_COUNT" ]; then SKIPPED=$SKIPPED_COUNT; fi
             
-            # Calculate passed tests
-            PASSED=$((TOTAL - FAILED - SKIPPED))
-          fi
+      #       # Calculate passed tests
+      #       PASSED=$((TOTAL - FAILED - SKIPPED))
+      #     fi
 
-          echo "XML Parsing Results:"
-          echo "Total: $TOTAL"
-          echo "Failed: $FAILED" 
-          echo "Skipped: $SKIPPED"
-          echo "Passed: $PASSED"
+      #     echo "XML Parsing Results:"
+      #     echo "Total: $TOTAL"
+      #     echo "Failed: $FAILED" 
+      #     echo "Skipped: $SKIPPED"
+      #     echo "Passed: $PASSED"
 
-          # Save to outputs
-          echo "total=$TOTAL" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED" >> $GITHUB_OUTPUT
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-          echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+      #     # Save to outputs
+      #     echo "total=$TOTAL" >> $GITHUB_OUTPUT
+      #     echo "passed=$PASSED" >> $GITHUB_OUTPUT
+      #     echo "failed=$FAILED" >> $GITHUB_OUTPUT
+      #     echo "skipped=$SKIPPED" >> $GITHUB_OUTPUT
+
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v5
+        id: junit-reporter
+        if: always()
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+        with:
+          commit: ${{ github.event.workflow_run.head_sha }}
+          annotate_only: true
+          fail_on_failure: true
+          require_tests: true
+          require_passed_tests: true
+          detailed_summary: true
+          include_time_in_summary: true
+          flaky_summary: true
+          group_suite: true
+          comment: true
+          updateComment: false
+          report_paths: 'src/test/playwright/test-reports/results.xml'
 
       - name: Update status with results
         if: always()
@@ -158,18 +178,18 @@ jobs:
           WORKFLOW_STATUS="${{ job.status }}"
           
           # Get test results
-          TOTAL="${{ steps.parse-results.outputs.total || 0 }}"
-          PASSED="${{ steps.parse-results.outputs.passed || 0 }}"
-          FAILED="${{ steps.parse-results.outputs.failed || 0 }}"
-          SKIPPED="${{ steps.parse-results.outputs.skipped || 0 }}"
+          TOTAL="${{ steps.junit-reporter.outputs.total || 0 }}"
+          PASSED="${{ steps.junit-reporter.outputs.passed || 0 }}"
+          FAILED="${{ steps.junit-reporter.outputs.failed || 0 }}"
+          SKIPPED="${{ steps.junit-reporter.outputs.skipped || 0 }}"
           
           # Determine GitHub status state based on workflow status
           if [ "$WORKFLOW_STATUS" = "success" ]; then
             STATE="success"
-            DESCRIPTION="✅ E2E tests finished: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+            DESCRIPTION="E2E tests finished: $PASSED passed, $FAILED failed, $SKIPPED skipped"
           elif [ "$WORKFLOW_STATUS" = "failure" ]; then
             STATE="failure"
-            DESCRIPTION="❌ E2E tests failed: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+            DESCRIPTION="E2E tests finished: $PASSED passed, $FAILED failed, $SKIPPED skipped"
           else
             STATE="error"
             DESCRIPTION="⚠️ E2E tests encountered an error"
@@ -217,26 +237,6 @@ jobs:
       #     files: src/test/playwright/test-reports/results.xml
 
 
-      - name: Publish Test Report
-        uses: mikepenz/action-junit-report@v5
-        if: always()
-        env:
-          NODE_OPTIONS: "--max_old_space_size=4096"
-        with:
-          check_name: "End-to-End (E2E) Tests Results"
-          commit: ${{ github.event.workflow_run.head_sha }}
-          annotate_only: true
-          fail_on_failure: true
-          require_tests: true
-          require_passed_tests: true
-          detailed_summary: true
-          # Include table with all test results in the summary (Also applies to comment). Defaults to false.
-          include_time_in_summary: true
-          flaky_summary: true
-          group_suite: true
-          comment: true
-          updateComment: false
-          report_paths: 'src/test/playwright/test-reports/results.xml'
 
 
 
