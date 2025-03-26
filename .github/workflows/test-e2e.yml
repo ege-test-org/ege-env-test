@@ -207,7 +207,7 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2.18.0
         if: always()
         with:
-          check_name: "End-to-End (E2E) Tests"
+          check_run: false
           comment_title: "End-to-End (E2E) Tests Results"
           commit: ${{ github.event.workflow_run.head_sha }}
           event_file: "event.json"
