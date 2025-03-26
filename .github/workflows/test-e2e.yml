@@ -107,8 +107,6 @@ jobs:
           name: JUnit Test Results
           if-no-files-found: error
           path: src/test/playwright/test-reports/*.xml
-      - name: Sleep
-        run: sleep 15
       - name: Parse test results and update status
         if: always()
         id: parse-results
