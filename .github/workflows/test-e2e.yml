@@ -186,17 +186,16 @@ jobs:
           # Determine GitHub status state based on workflow status
           if [ "$WORKFLOW_STATUS" = "success" ]; then
             STATE="success"
-            DESCRIPTION="E2E tests finished: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+            DESCRIPTION="E2E tests finished: $PASSED passed, $SKIPPED skipped, $FAILED failed"
           elif [ "$WORKFLOW_STATUS" = "failure" ]; then
             STATE="failure"
-            DESCRIPTION="E2E tests finished: $PASSED passed, $FAILED failed, $SKIPPED skipped"
+            DESCRIPTION="E2E tests finished: $FAILED failed, $SKIPPED skipped, $PASSED passed"
           else
             STATE="error"
             DESCRIPTION="⚠️ E2E tests encountered an error"
           fi
 
           DESCRIPTION_ESCAPED=$(echo "$DESCRIPTION" | sed 's/"/\\"/g')
-          DESCRIPTION_ESCAPED="${{ steps.junit-reporter.outputs.summary || '⚠️ E2E tests encountered an error' }}"
           JSON_PAYLOAD='{"state":"'$STATE'","context":"${{ env.STATUS_CONTEXT }}","description":"'$DESCRIPTION_ESCAPED'","target_url":"${{ env.TARGET_URL }}"}'
           echo "JSON payload: $JSON_PAYLOAD"
           
