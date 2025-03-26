@@ -200,3 +200,16 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             "${{ env.STATUSES_REQUEST_URL }}" \
             -d "$JSON_PAYLOAD"
+
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2.18.0
+        if: always()
+        with:
+          check_name: "End-to-End (E2E) Test Results"
+          comment_title: "End-to-End (E2E) Test Results"
+          commit: ${{ github.event.workflow_run.head_sha }}
+          action_fail: true
+          pull_request_build: "commit"
+          files: src/test/playwright/test-reports/results.xml
+
