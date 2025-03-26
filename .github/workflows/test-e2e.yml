@@ -225,6 +225,7 @@ jobs:
         with:
           check_name: "End-to-End (E2E) Tests Results"
           commit: ${{ github.event.workflow_run.head_sha }}
+          annotate_only: true
           fail_on_failure: true
           require_tests: true
           require_passed_tests: true
