@@ -207,7 +207,7 @@ jobs:
           check_name: "End-to-End (E2E) Test Results"
           comment_title: "End-to-End (E2E) Test Results"
           commit: ${{ github.event.workflow_run.head_sha }}
-          event_name: ${{ github.event }}
+          event_name: "E2E Tests"
           action_fail: true
           pull_request_build: "commit"
           files: src/test/playwright/test-reports/results.xml
