@@ -273,8 +273,6 @@ jobs:
           echo "detailed_summary: ${{ steps.test-reporter.outputs.detailed_summary }}"
           echo "summary: ${{ steps.test-reporter.outputs.summary }}"
           echo "flaky_summary: ${{ steps.test-reporter.outputs.flaky_summary }}"
-          echo "Summary length: ${{ length(steps.test-reporter.outputs.detailed_summary) }}"
-          echo "Raw summary: ${{ toJSON(steps.test-reporter.outputs.detailed_summary) }}"
 
 
       # Add comment to the PR with test results
