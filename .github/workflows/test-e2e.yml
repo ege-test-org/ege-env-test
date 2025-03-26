@@ -165,7 +165,6 @@ jobs:
           annotate_only: true
           include_time_in_summary: true
           group_suite: true
-          comment: true
           updateComment: false
           report_paths: 'src/test/playwright/test-reports/results.xml'
 
