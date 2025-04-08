@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" tests="26" skipped="0" failures="0" errors="0" timestamp="2025-02-14T23:42:37" hostname="fv-az1721-502" time="2.566">
+  <properties/>
+  <testcase name="createAndUpdateExampleModelingSubmissionTutorial(boolean) [1] usedForTutorial=true" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.109"/>
+  <testcase name="createAndUpdateExampleModelingSubmissionTutorial(boolean) [2] usedForTutorial=false" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.158"/>
+  <testcase name="createAndDeleteExampleModelingSubmission(boolean) [1] usedForTutorial=true" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.153"/>
+  <testcase name="createAndDeleteExampleModelingSubmission(boolean) [2] usedForTutorial=false" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.132"/>
+  <testcase name="createExampleModelingSubmission_asStudent_forbidden()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.082"/>
+  <testcase name="prepareExampleTextSubmissionForAssessmentShouldCreateBlocks()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.094"/>
+  <testcase name="importExampleSubmissionWithStudentSubmission_isNotAtLeastInstructorInExercise_forbidden()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.07"/>
+  <testcase name="importExampleSubmissionForTextExerciseCopiesGradingInstruction()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.081"/>
+  <testcase name="importExampleSubmissionWithTextSubmission_exerciseIdNotMatched()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.066"/>
+  <testcase name="importExampleSubmissionWithModelingSubmission()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.118"/>
+  <testcase name="getExampleModelingSubmission()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.233"/>
+  <testcase name="createAndDeleteExampleModelingSubmissionWithResult(boolean) [1] usedForTutorial=true" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.312"/>
+  <testcase name="createAndDeleteExampleModelingSubmissionWithResult(boolean) [2] usedForTutorial=false" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.073"/>
+  <testcase name="createExampleTextAssessmentNotExistentId()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.097"/>
+  <testcase name="createExampleTextAssessment()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.069"/>
+  <testcase name="createExampleModelingAssessment()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.058"/>
+  <testcase name="importExampleSubmissionWithStudentSubmission_wrongExerciseId()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.04"/>
+  <testcase name="createExampleModelingSubmission_asTutor_forbidden()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.032"/>
+  <testcase name="importExampleSubmissionForModelingExerciseCopiesGradingInstruction()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.063"/>
+  <testcase name="createExampleTextAssessment_wrongExerciseId()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.053"/>
+  <testcase name="getExampleModelingSubmission_asStudent_forbidden()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.035"/>
+  <testcase name="importExampleSubmissionWithTextSubmission()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.067"/>
+  <testcase name="getExampleModelingAssessment_whenTutorAndUsedForTutorial_shouldSendCleanedResult()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.11"/>
+  <testcase name="updateExampleModelingSubmission(boolean) [1] usedForTutorial=true" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.07"/>
+  <testcase name="updateExampleModelingSubmission(boolean) [2] usedForTutorial=false" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.067"/>
+  <testcase name="importExampleSubmissionWithModelingSubmission_exerciseIdNotMatched()" classname="de.tum.cit.aet.artemis.assessment.ExampleSubmissionIntegrationTest" time="0.069"/>
+  <system-out><![CDATA[
+Starting logs for ExampleSubmissionIntegrationTest
+
+  Starting logs for ExampleSubmissionIntegrationTest > createAndUpdateExampleModelingSubmissionTutorial(boolean) [1] usedForTutorial=true
+    23:42:37.935 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:37.935 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:37.937 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:37.940 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:37.941 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:37.943 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:37.944 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 5 users from all courses...
+    23:42:37.945 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 5 users from all courses. Done
+    23:42:37.945 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:37.947 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:37.951 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:37.951 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createAndUpdateExampleModelingSubmissionTutorial'
+    23:42:37.956 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/211/example-submissions
+    23:42:37.960 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='true'}
+    23:42:37.990 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/211/example-submissions
+    23:42:37.992 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+
+  Starting logs for ExampleSubmissionIntegrationTest > createAndUpdateExampleModelingSubmissionTutorial(boolean) [2] usedForTutorial=false
+    23:42:38.052 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.058 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.066 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.071 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.072 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.079 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.085 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.086 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.086 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.102 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.108 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.108 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createAndUpdateExampleModelingSubmissionTutorial'
+    23:42:38.113 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/213/example-submissions
+    23:42:38.118 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+    23:42:38.142 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/213/example-submissions
+    23:42:38.148 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+
+  Starting logs for ExampleSubmissionIntegrationTest > createAndDeleteExampleModelingSubmission(boolean) [1] usedForTutorial=true
+    23:42:38.227 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.227 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.236 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.242 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.243 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.249 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.250 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.251 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.251 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.260 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.266 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.266 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createAndDeleteExampleModelingSubmission'
+    23:42:38.275 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/215/example-submissions
+    23:42:38.278 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='true'}
+    23:42:38.304 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request DELETE /api/example-submissions/5
+    23:42:38.311 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to delete ExampleSubmission : 5
+
+  Starting logs for ExampleSubmissionIntegrationTest > createAndDeleteExampleModelingSubmission(boolean) [2] usedForTutorial=false
+    23:42:38.373 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.374 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.387 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.396 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.398 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.409 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.410 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.411 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.411 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.419 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.425 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.425 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createAndDeleteExampleModelingSubmission'
+    23:42:38.430 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/217/example-submissions
+    23:42:38.434 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+    23:42:38.455 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request DELETE /api/example-submissions/6
+    23:42:38.456 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to delete ExampleSubmission : 6
+
+  Starting logs for ExampleSubmissionIntegrationTest > createExampleModelingSubmission_asStudent_forbidden()
+    23:42:38.507 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.511 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.517 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.522 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.523 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.528 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.529 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.532 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.532 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.541 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.547 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.547 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createExampleModelingSubmission_asStudent_forbidden'
+    23:42:38.553 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/219/example-submissions
+    23:42:38.558 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Forbidden: Access Denied
+
+  Starting logs for ExampleSubmissionIntegrationTest > prepareExampleTextSubmissionForAssessmentShouldCreateBlocks()
+    23:42:38.594 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.594 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.603 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.608 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.611 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.617 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.618 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.622 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.622 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.628 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.631 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.632 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#prepareExampleTextSubmissionForAssessmentShouldCreateBlocks'
+    23:42:38.636 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/example-submissions/7
+    23:42:38.638 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to get ExampleSubmission : 7
+    23:42:38.647 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/222/example-submissions/7/prepare-assessment
+    23:42:38.648 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to prepare ExampleSubmission for assessment : 7
+    23:42:38.662 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/example-submissions/7
+    23:42:38.663 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to get ExampleSubmission : 7
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionWithStudentSubmission_isNotAtLeastInstructorInExercise_forbidden()
+    23:42:38.681 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.682 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.685 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.692 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.695 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.701 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.702 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.706 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.706 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.711 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.717 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.718 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionWithStudentSubmission_isNotAtLeastInstructorInExercise_forbidden'
+    23:42:38.735 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/224/example-submissions/import/12345
+    23:42:38.736 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 12345
+    23:42:38.739 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Forbidden: You are not allowed to access the Course with id 286
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionForTextExerciseCopiesGradingInstruction()
+    23:42:38.752 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.752 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.755 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.758 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.759 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.762 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.763 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.764 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.764 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.767 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.770 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.770 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionForTextExerciseCopiesGradingInstruction'
+    23:42:38.779 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 226 and participant 31 (result to be deleted: null)
+    23:42:38.779 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 226 and participant 31 at 2025-02-14T23:42:38.879428475Z[Etc/UTC].
+    23:42:38.783 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 226 and participant 31 (result to be deleted: null)
+    23:42:38.783 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 226 and participant 31 at 2025-02-14T23:42:38.883322938Z[Etc/UTC].
+    23:42:38.786 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 226 and participant 31 (result to be deleted: null)
+    23:42:38.786 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 226 and participant 31 at 2025-02-14T23:42:38.886920147Z[Etc/UTC].
+    23:42:38.791 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 226 and participant 31 (result to be deleted: null)
+    23:42:38.791 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 226 and participant 31 at 2025-02-14T23:42:38.891848157Z[Etc/UTC].
+    23:42:38.795 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/226/example-submissions/import/110
+    23:42:38.795 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 110
+    23:42:38.800 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.t.s.TextExerciseImportService : Copying the Submission to new ExampleSubmission: TextSubmission{id=null, text='', language='null'}
+    23:42:38.801 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.t.s.TextExerciseImportService : Copying the TextBlocks to new TextSubmission: TextSubmission{id=111, text='test', language='ENGLISH'}
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionWithTextSubmission_exerciseIdNotMatched()
+    23:42:38.837 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.838 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.841 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.843 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.845 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.848 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.849 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.849 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.849 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.852 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.856 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.856 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionWithTextSubmission_exerciseIdNotMatched'
+    23:42:38.869 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/229/example-submissions/import/112
+    23:42:38.870 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 112
+    23:42:38.876 |  32 nPool-1-worker-6 | ERROR | tech.jhipster.web.util.HeaderUtil    : Entity processing failed, ExerciseId does not match with the exerciseId in submission participation
+    23:42:38.876 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Bad Request: ExerciseId does not match with the exerciseId in submission participation
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionWithModelingSubmission()
+    23:42:38.912 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:38.912 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:38.918 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:38.921 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:38.922 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:38.925 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:38.926 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:38.927 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:38.927 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:38.935 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:38.942 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:38.943 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionWithModelingSubmission'
+    23:42:38.958 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 230 and participant 29 (result to be deleted: null)
+    23:42:38.958 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 230 and participant 29 at 2025-02-14T23:42:39.058818270Z[Etc/UTC].
+    23:42:38.965 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 230 and participant 29 (result to be deleted: null)
+    23:42:38.965 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 230 and participant 29 at 2025-02-14T23:42:39.065573098Z[Etc/UTC].
+    23:42:38.973 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/230/example-submissions/import/113
+    23:42:38.974 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 113
+    23:42:38.979 |  32 nPool-1-worker-6 | DEBUG | .a.m.s.ModelingExerciseImportService : Copying the Submission to new ExampleSubmission: ModelingSubmission{id=null}
+
+  Starting logs for ExampleSubmissionIntegrationTest > getExampleModelingSubmission()
+    23:42:39.024 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.025 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.028 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.031 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.032 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.035 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.036 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.037 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.037 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.043 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.048 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.048 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#getExampleModelingSubmission'
+    23:42:39.055 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/example-submissions/10
+    23:42:39.056 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to get ExampleSubmission : 10
+
+  Starting logs for ExampleSubmissionIntegrationTest > createAndDeleteExampleModelingSubmissionWithResult(boolean) [1] usedForTutorial=true
+    23:42:39.268 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.268 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.277 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.279 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.284 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.441 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.442 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.443 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.443 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.447 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.450 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.450 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createAndDeleteExampleModelingSubmissionWithResult'
+    23:42:39.454 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/234/example-submissions
+    23:42:39.456 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='true'}
+    23:42:39.476 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request DELETE /api/example-submissions/11
+    23:42:39.477 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to delete ExampleSubmission : 11
+
+  Starting logs for ExampleSubmissionIntegrationTest > createAndDeleteExampleModelingSubmissionWithResult(boolean) [2] usedForTutorial=false
+    23:42:39.581 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.581 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.586 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.592 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.593 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.596 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.597 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.597 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.597 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.601 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.604 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.604 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createAndDeleteExampleModelingSubmissionWithResult'
+    23:42:39.609 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/236/example-submissions
+    23:42:39.613 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+    23:42:39.624 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request DELETE /api/example-submissions/12
+    23:42:39.624 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to delete ExampleSubmission : 12
+
+  Starting logs for ExampleSubmissionIntegrationTest > createExampleTextAssessmentNotExistentId()
+    23:42:39.649 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.649 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.658 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.661 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.662 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.666 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.667 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.668 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.668 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.671 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.675 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.675 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createExampleTextAssessmentNotExistentId'
+    23:42:39.701 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/exercises/239/submissions/118/example-result
+    23:42:39.703 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.t.w.TextAssessmentResource : REST request to get example assessment for tutors text assessment: 118
+    23:42:39.719 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/239/example-submissions/1233/example-text-assessment
+    23:42:39.721 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.t.w.TextAssessmentResource : REST request to save text example assessment : 1233
+    23:42:39.732 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Not Found: ExampleSubmission with identifier: "1233" does not exist
+
+  Starting logs for ExampleSubmissionIntegrationTest > createExampleTextAssessment()
+    23:42:39.748 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.748 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.752 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.754 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.756 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.758 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.759 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.760 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.760 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.764 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.767 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.767 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createExampleTextAssessment'
+    23:42:39.780 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/exercises/241/submissions/119/example-result
+    23:42:39.782 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.t.w.TextAssessmentResource : REST request to get example assessment for tutors text assessment: 119
+    23:42:39.788 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/241/example-submissions/14/example-text-assessment
+    23:42:39.788 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.t.w.TextAssessmentResource : REST request to save text example assessment : 14
+
+  Starting logs for ExampleSubmissionIntegrationTest > createExampleModelingAssessment()
+    23:42:39.817 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.818 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.821 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.824 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.825 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.828 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.829 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.830 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.830 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.834 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.837 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.837 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createExampleModelingAssessment'
+    23:42:39.840 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/modeling-submissions/15/example-assessment
+    23:42:39.842 |  32 nPool-1-worker-6 | DEBUG | c.a.a.m.w.ModelingAssessmentResource : REST request to save modeling example assessment : 15
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionWithStudentSubmission_wrongExerciseId()
+    23:42:39.878 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.879 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.882 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.884 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.886 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.888 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.889 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.890 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.890 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.894 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.896 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.897 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionWithStudentSubmission_wrongExerciseId'
+    23:42:39.900 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/1233/example-submissions/import/12345
+    23:42:39.901 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 12345
+    23:42:39.905 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Not Found: Exercise with identifier: "1233" does not exist
+
+  Starting logs for ExampleSubmissionIntegrationTest > createExampleModelingSubmission_asTutor_forbidden()
+    23:42:39.919 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.919 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.922 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.925 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.926 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.928 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.929 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.930 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.930 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.933 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.936 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.936 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createExampleModelingSubmission_asTutor_forbidden'
+    23:42:39.938 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/246/example-submissions
+    23:42:39.940 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Forbidden: Access Denied
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionForModelingExerciseCopiesGradingInstruction()
+    23:42:39.950 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:39.950 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:39.953 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:39.955 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:39.956 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:39.958 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:39.959 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:39.960 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:39.960 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:39.964 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:39.967 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:39.968 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionForModelingExerciseCopiesGradingInstruction'
+    23:42:39.976 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 248 and participant 31 (result to be deleted: null)
+    23:42:39.976 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 248 and participant 31 at 2025-02-14T23:42:40.076347095Z[Etc/UTC].
+    23:42:39.979 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 248 and participant 31 (result to be deleted: null)
+    23:42:39.980 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 248 and participant 31 at 2025-02-14T23:42:40.080007572Z[Etc/UTC].
+    23:42:39.983 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 248 and participant 31 (result to be deleted: null)
+    23:42:39.983 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 248 and participant 31 at 2025-02-14T23:42:40.083832055Z[Etc/UTC].
+    23:42:39.987 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 248 and participant 31 (result to be deleted: null)
+    23:42:39.987 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 248 and participant 31 at 2025-02-14T23:42:40.087688757Z[Etc/UTC].
+    23:42:39.991 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/248/example-submissions/import/121
+    23:42:39.991 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 121
+    23:42:39.995 |  32 nPool-1-worker-6 | DEBUG | .a.m.s.ModelingExerciseImportService : Copying the Submission to new ExampleSubmission: ModelingSubmission{id=null}
+
+  Starting logs for ExampleSubmissionIntegrationTest > createExampleTextAssessment_wrongExerciseId()
+    23:42:40.017 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.017 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.020 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.023 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.024 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.027 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.028 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.029 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.029 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.032 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.035 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.035 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#createExampleTextAssessment_wrongExerciseId'
+    23:42:40.045 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/exercises/251/submissions/123/example-result
+    23:42:40.047 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.t.w.TextAssessmentResource : REST request to get example assessment for tutors text assessment: 123
+    23:42:40.053 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/1233/example-submissions/17/example-text-assessment
+    23:42:40.054 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.t.w.TextAssessmentResource : REST request to save text example assessment : 17
+    23:42:40.055 |  32 nPool-1-worker-6 | ERROR | tech.jhipster.web.util.HeaderUtil    : Entity processing failed, exerciseId in ExampleSubmission of exampleSubmissionId 17 doesn't match the paths exerciseId!
+    23:42:40.055 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Bad Request: exerciseId in ExampleSubmission of exampleSubmissionId 17 doesn't match the paths exerciseId!
+
+  Starting logs for ExampleSubmissionIntegrationTest > getExampleModelingSubmission_asStudent_forbidden()
+    23:42:40.071 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.071 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.074 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.077 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.078 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.081 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.082 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.083 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.083 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.086 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.089 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.089 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#getExampleModelingSubmission_asStudent_forbidden'
+    23:42:40.091 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/example-submissions/18
+    23:42:40.093 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Forbidden: Access Denied
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionWithTextSubmission()
+    23:42:40.106 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.106 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.109 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.112 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.113 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.116 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.117 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.117 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.117 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.121 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.123 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.124 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionWithTextSubmission'
+    23:42:40.134 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 255 and participant 29 (result to be deleted: null)
+    23:42:40.134 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 255 and participant 29 at 2025-02-14T23:42:40.234286718Z[Etc/UTC].
+    23:42:40.138 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 255 and participant 29 (result to be deleted: null)
+    23:42:40.138 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 255 and participant 29 at 2025-02-14T23:42:40.238755372Z[Etc/UTC].
+    23:42:40.142 |  32 nPool-1-worker-6 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 255 and participant 29 (result to be deleted: null)
+    23:42:40.142 |  32 nPool-1-worker-6 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 255 and participant 29 at 2025-02-14T23:42:40.242810695Z[Etc/UTC].
+    23:42:40.144 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/255/example-submissions/import/125
+    23:42:40.145 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 125
+    23:42:40.148 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.t.s.TextExerciseImportService : Copying the Submission to new ExampleSubmission: TextSubmission{id=null, text='', language='null'}
+    23:42:40.149 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.t.s.TextExerciseImportService : Copying the TextBlocks to new TextSubmission: TextSubmission{id=126, text='submissionText', language='ENGLISH'}
+
+  Starting logs for ExampleSubmissionIntegrationTest > getExampleModelingAssessment_whenTutorAndUsedForTutorial_shouldSendCleanedResult()
+    23:42:40.176 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.177 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.180 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.185 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.186 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.192 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.196 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.197 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.197 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.203 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.209 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.209 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#getExampleModelingAssessment_whenTutorAndUsedForTutorial_shouldSendCleanedResult'
+    23:42:40.214 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/modeling-submissions/20/example-assessment
+    23:42:40.215 |  32 nPool-1-worker-6 | DEBUG | c.a.a.m.w.ModelingAssessmentResource : REST request to save modeling example assessment : 20
+    23:42:40.254 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/exercise/256/modeling-submissions/127/example-assessment
+    23:42:40.255 |  32 nPool-1-worker-6 | DEBUG | c.a.a.m.w.ModelingAssessmentResource : REST request to get example assessment for tutors text assessment: 127
+
+  Starting logs for ExampleSubmissionIntegrationTest > updateExampleModelingSubmission(boolean) [1] usedForTutorial=true
+    23:42:40.287 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.288 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.291 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.294 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.295 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.298 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.299 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.300 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.300 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.303 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.306 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.306 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#updateExampleModelingSubmission'
+    23:42:40.309 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/258/example-submissions
+    23:42:40.310 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='true'}
+    23:42:40.317 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/258/example-submissions
+    23:42:40.318 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to update ExampleSubmission : ExampleSubmission{id=21, usedForTutorial='true'}
+    23:42:40.331 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/258/example-submissions
+    23:42:40.334 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to update ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+    23:42:40.334 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+
+  Starting logs for ExampleSubmissionIntegrationTest > updateExampleModelingSubmission(boolean) [2] usedForTutorial=false
+    23:42:40.360 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.360 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.363 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.365 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.366 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.369 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.370 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.371 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.371 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.374 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.380 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.381 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#updateExampleModelingSubmission'
+    23:42:40.384 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/260/example-submissions
+    23:42:40.386 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+    23:42:40.392 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/260/example-submissions
+    23:42:40.393 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to update ExampleSubmission : ExampleSubmission{id=23, usedForTutorial='false'}
+    23:42:40.403 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request PUT /api/exercises/260/example-submissions
+    23:42:40.405 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to update ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+    23:42:40.405 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to save ExampleSubmission : ExampleSubmission{id=null, usedForTutorial='false'}
+
+  Starting logs for ExampleSubmissionIntegrationTest > importExampleSubmissionWithModelingSubmission_exerciseIdNotMatched()
+    23:42:40.430 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup start
+    23:42:40.430 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 1 students...
+    23:42:40.433 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 students generated. Generate 1 tutors...
+    23:42:40.437 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 tutors generated. Generate 0 editors...
+    23:42:40.438 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 1 instructors...
+    23:42:40.441 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 1 instructors generated
+    23:42:40.442 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.443 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.443 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database...
+    23:42:40.447 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 3 users to database. Done
+    23:42:40.451 |  32 nPool-1-worker-6 | DEBUG | a.a.ExampleSubmissionIntegrationTest : Test setup done
+    23:42:40.451 |  32 nPool-1-worker-6 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExampleSubmissionIntegrationTest#importExampleSubmissionWithModelingSubmission_exerciseIdNotMatched'
+    23:42:40.468 |  32 nPool-1-worker-6 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request POST /api/exercises/264/example-submissions/import/132
+    23:42:40.469 |  32 nPool-1-worker-6 | DEBUG | .c.a.a.a.w.ExampleSubmissionResource : REST request to import Student Submission as ExampleSubmission : 132
+    23:42:40.479 |  32 nPool-1-worker-6 | ERROR | tech.jhipster.web.util.HeaderUtil    : Entity processing failed, ExerciseId does not match with the exerciseId in submission participation
+    23:42:40.479 |  32 nPool-1-worker-6 | WARN  | o.z.p.spring.common.AdviceTraits     : Bad Request: ExerciseId does not match with the exerciseId in submission participation
+
+Finished logs for ExampleSubmissionIntegrationTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

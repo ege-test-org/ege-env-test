@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.tum.cit.aet.artemis.assessment.ExerciseScoresChartIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-14T23:42:40" hostname="fv-az1721-502" time="0.498">
+  <properties/>
+  <testcase name="getCourseExerciseScores_asStudent_shouldReturnCorrectIndividualAverageAndMaxScores()" classname="de.tum.cit.aet.artemis.assessment.ExerciseScoresChartIntegrationTest" time="0.498"/>
+  <system-out><![CDATA[
+Starting logs for ExerciseScoresChartIntegrationTest
+
+  Starting logs for ExerciseScoresChartIntegrationTest > getCourseExerciseScores_asStudent_shouldReturnCorrectIndividualAverageAndMaxScores()
+    23:42:40.527 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Generate 3 students...
+    23:42:40.532 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 3 students generated. Generate 2 tutors...
+    23:42:40.539 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 2 tutors generated. Generate 0 editors...
+    23:42:40.540 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 editors generated. Generate 0 instructors...
+    23:42:40.544 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : 0 instructors generated
+    23:42:40.545 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses...
+    23:42:40.546 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Removing 3 users from all courses. Done
+    23:42:40.546 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 5 users to database...
+    23:42:40.552 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.u.util.UserUtilService   : Save 5 users to database. Done
+    23:42:40.587 |  33 nPool-1-worker-7 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 265 and participant 32 (result to be deleted: null)
+    23:42:40.587 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 265 and participant 32 at 2025-02-14T23:42:40.687526654Z[Etc/UTC].
+    23:42:40.596 |  33 nPool-1-worker-7 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 267 and participant 11 (result to be deleted: null)
+    23:42:40.596 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 267 and participant 11 at 2025-02-14T23:42:40.696482356Z[Etc/UTC].
+    23:42:40.604 |  33 nPool-1-worker-7 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 265 and participant 33 (result to be deleted: null)
+    23:42:40.604 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 265 and participant 33 at 2025-02-14T23:42:40.704425730Z[Etc/UTC].
+    23:42:40.611 |  33 nPool-1-worker-7 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 265 and participant 34 (result to be deleted: null)
+    23:42:40.611 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 265 and participant 34 at 2025-02-14T23:42:40.711577698Z[Etc/UTC].
+    23:42:40.619 |  33 nPool-1-worker-7 | DEBUG | .c.s.m.InstanceMessageReceiveService : Received schedule participant score for exercise 267 and participant 12 (result to be deleted: null)
+    23:42:40.619 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 267 and participant 12 at 2025-02-14T23:42:40.719549676Z[Etc/UTC].
+    23:42:40.621 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 265 and participant 32 at 2025-02-14T23:42:40.721513258Z[Etc/UTC].
+    23:42:40.621 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 267 and participant 11 at 2025-02-14T23:42:40.721543003Z[Etc/UTC].
+    23:42:40.621 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 265 and participant 33 at 2025-02-14T23:42:40.721556819Z[Etc/UTC].
+    23:42:40.621 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 265 and participant 34 at 2025-02-14T23:42:40.721566337Z[Etc/UTC].
+    23:42:40.621 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Scheduled task for exercise 267 and participant 12 at 2025-02-14T23:42:40.721574081Z[Etc/UTC].
+    23:42:40.621 |  33 nPool-1-worker-7 | DEBUG | .a.s.ParticipantScoreScheduleService : Processing of 5 results and 0 participant scores.
+    23:42:40.721 | 666 taskScheduler-4  | DEBUG | .a.s.ParticipantScoreScheduleService : Processing exercise 265 and participant 32 to update participant scores.
+    23:42:40.724 | 663 taskScheduler-1  | DEBUG | .a.s.ParticipantScoreScheduleService : Processing exercise 267 and participant 11 to update participant scores.
+    23:42:40.727 | 664 taskScheduler-2  | DEBUG | .a.s.ParticipantScoreScheduleService : Processing exercise 265 and participant 33 to update participant scores.
+    23:42:40.733 | 665 taskScheduler-3  | DEBUG | .a.s.ParticipantScoreScheduleService : Processing exercise 265 and participant 34 to update participant scores.
+    23:42:40.744 | 664 taskScheduler-2  | DEBUG | .a.s.ParticipantScoreScheduleService : Updated participant score 14.
+    23:42:40.746 | 666 taskScheduler-4  | DEBUG | .a.s.ParticipantScoreScheduleService : Updated participant score 15.
+    23:42:40.746 | 666 taskScheduler-4  | DEBUG | .a.s.ParticipantScoreScheduleService : Updating the participant score for exercise 265 and participant 32 took 25 ms.
+    23:42:40.746 | 666 taskScheduler-4  | DEBUG | .a.s.ParticipantScoreScheduleService : Processing exercise 267 and participant 12 to update participant scores.
+    23:42:40.753 | 665 taskScheduler-3  | DEBUG | .a.s.ParticipantScoreScheduleService : Updated participant score 16.
+    23:42:40.754 | 664 taskScheduler-2  | DEBUG | .a.s.ParticipantScoreScheduleService : Updating the participant score for exercise 265 and participant 33 took 27 ms.
+    23:42:40.756 | 665 taskScheduler-3  | DEBUG | .a.s.ParticipantScoreScheduleService : Updating the participant score for exercise 265 and participant 34 took 23 ms.
+    23:42:40.770 | 663 taskScheduler-1  | DEBUG | .a.s.ParticipantScoreScheduleService : Updated participant score 17.
+    23:42:40.771 | 663 taskScheduler-1  | DEBUG | .a.s.ParticipantScoreScheduleService : Updating the participant score for exercise 267 and participant 11 took 47 ms.
+    23:42:40.773 | 666 taskScheduler-4  | DEBUG | .a.s.ParticipantScoreScheduleService : Updated participant score 18.
+    23:42:40.773 | 666 taskScheduler-4  | DEBUG | .a.s.ParticipantScoreScheduleService : Updating the participant score for exercise 267 and participant 12 took 27 ms.
+    23:42:40.939 |  33 nPool-1-worker-7 | INFO  | i.z.t.d.l.EmbeddedDatabaseReporter   : JDBC URL to connect to 'dataSource': url='jdbc:h2:tcp://localhost:41063/mem:df70fc46-7e57-4cb5-9cd0-c1d90c14afa7;USER=sa', scope='ExerciseScoresChartIntegrationTest#getCourseExerciseScores_asStudent_shouldReturnCorrectIndividualAverageAndMaxScores'
+    23:42:40.944 |  33 nPool-1-worker-7 | DEBUG | d.t.c.a.a.c.s.f.ApiVersionFilter     : Adding Version to Request GET /api/courses/306/charts/exercise-scores
+    23:42:40.945 |  33 nPool-1-worker-7 | DEBUG | .a.a.e.w.ExerciseScoresChartResource : REST request to get exercise scores for course with id: 306
+
+Finished logs for ExerciseScoresChartIntegrationTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
