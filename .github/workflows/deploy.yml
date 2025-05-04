@@ -29,6 +29,7 @@ jobs:
     - name: Send greeting
       run: |
         echo "Branch: ${{ github.event.inputs.branch_name }}"
+        exit 1
     #     echo "Environment: ${{ github.event.inputs.environment_name }}"
     #     echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
     # - name: Send greeting
@@ -50,5 +51,5 @@ jobs:
     - name: Send greeting
       run: |
         echo "Deploying to ${{ github.event.inputs.environment_name }}"
-        sleep 30 && exit 1
+        exit 1
 
