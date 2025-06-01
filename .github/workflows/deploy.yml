@@ -2,14 +2,11 @@ name: Deploy to test servers
 
 
 on:
-  workflow_dispatch:
-    inputs:
-      branch_name:
-        description: "Which branch to deploy"
-        required: true
-        type: string
+  release:
+    types:
+    - created
 
-concurrency: ${{ github.event.inputs.environment_name }}
+concurrency: dev
 
 jobs:
   conditional_build_job:
@@ -17,7 +14,7 @@ jobs:
     steps:
     - name: Send greeting
       run: |
-        echo "Branch: ${{ github.event.inputs.branch_name }}"
+        echo "Branch: asdasdsadadasd"
     #     echo "Environment: ${{ github.event.inputs.environment_name }}"
     #     echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
     # - name: Send greeting
@@ -32,12 +29,12 @@ jobs:
     #     echo "Triggered by?: ${{ github.event.inputs.triggered_by }}"
 
   deploy:
-    environment: ${{ github.event.inputs.environment_name }}
+    environment: dev
     needs: conditional_build_job
     runs-on: ubuntu-latest
     steps:
     - name: Send greeting
       run: |
-        echo "Deploying to ${{ github.event.inputs.environment_name }}"
+        echo "Deploying to asdasdasdasd"
         sleep 30 && exit 1
 
